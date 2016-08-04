@@ -1,0 +1,15 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    - var title = title || "Andrew Cotter"
+    title #{title}
+    link(rel="stylesheet" href="/assets/main.css")
+    
+  body
+    ul
+      li: a(href="/") Home
+      li: a(href="/about") About
+      li: a(href="/about") Contact
+      li: a(href="/about") Resume/CV
+    != yield

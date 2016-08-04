@@ -1,0 +1,283 @@
+// @import "../mdl/material";
+@import "../bourbon/bourbon";
+@import "../base/grid-settings";
+@import "../neat/neat";
+@import "../base/base";
+
+
+body{
+  padding: 50px 20px 0;
+  background: #f4f4f7;
+  color: #444;
+  margin: 0;
+  @include transition( all 0.8s);
+}
+
+h1{
+  font-size: 65px;
+  line-height: 1.2em;
+  border-bottom: #CCC solid 1px;
+  padding: 20px 0;
+}
+h2{
+    // font-weight: 400;
+    padding: 0 0 20px 0;
+}
+h3{
+  font-weight: 300;
+//   padding: 20px 0;
+}
+
+p{
+    // padding: 5px;
+}
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+
+.image-gradient-dynamic {
+  $image-gradient-color-top: red; 
+  $transparency-top: 0.9;
+  $image-gradient-color-bottom: green; 
+  $transparency-bottom: 0.6;
+  $vertical-angle: 0deg;
+  $image-gradient-color-left: teal; 
+  $transparency-left: 0.8;
+  $image-gradient-color-right: yellow; 
+  $transparency-right: 0.8;
+  $horizontal-angle: 90deg;
+  
+//   line-height: 0;
+  position: relative;
+//   width: 100%;
+
+  img {
+   height: auto;
+   left: 0; 
+   position: relative;
+   top: 0;
+   width: 100%;
+   background: url("https:
+//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+   // background-color: $grid-item-background;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+
+  .copy {
+    @include transform(translate(-50%, -50%));
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    z-index: 999;
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+
+    &:after {
+      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
+        transparentize($image-gradient-color-right, $transparency-right));
+      @include position(absolute, 0px 0px 0px 0px);
+      content: '';
+      display: block;
+      @include transition-property(transform, opacity);
+    }
+    &:active,
+    &:focus,
+    &:hover{
+    //   opacity: .5;
+      color: darken($image-gradient-color-top, 15%);
+      color: darken($image-gradient-color-bottom, 15%);
+      color: darken($image-gradient-color-left, 15%);
+      color: darken($image-gradient-color-right, 15%);
+    }
+  }
+}
+
+
+.grid-items {
+  $action-color: #477DCA !default;
+  $base-background-color: white !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $grid-items-background: $base-background-color;
+  $grid-item-background: desaturate($action-color, 10%);
+  $grid-item-colors: 
+    desaturate($action-color, 10%), 
+    #29CDB5, 
+    #E2C85B,
+    #008698,
+    #F08A5D, 
+    #E0FFFB,
+    #6A2C70,
+    #29CDB5, 
+    #E2C85B,
+    #008698,
+    #F08A5D, 
+    #E0FFFB,
+    #6A2C70;
+  $grid-item-border-size: 9px;
+  $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 14em;
+
+  @include clearfix;
+  
+  
+    
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    background: $grid-item-background;
+    border-bottom: $grid-item-border-size solid $grid-items-background;
+    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
+    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
+    border-top: 0;
+    border-color: #f4f4f7;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    overflow: hidden;
+    outline: none;
+    padding: 2em;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    @for $i from 1 through length($grid-item-colors) { 
+// assign colors from $grid-item-colors list
+      &:nth-child(#{$i}) {
+        $background-from-list: nth($grid-item-colors, $i);
+        background-color: $background-from-list;
+        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
+
+        &:focus,
+        &:hover {
+          background-color: darken($background-from-list, 30%);
+          background-repeat: no-repeat;
+        //   background-position: top;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .grid-item h1 {
+    color: $grid-item-color;
+    font-size: 1.3em;
+    margin-bottom: 0.4em;
+  }
+
+  .grid-item p {
+    color: transparentize($grid-item-color, 0.1);
+    line-height: 1.5em;
+    margin: auto;
+    
+    // @include media($medium-screen) {
+    //   max-width: 70%;
+    // }
+  }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+    
+    // p {
+    //   @include media($medium-screen) {
+    //     max-width: 60%;
+    //   }  
+    // }
+  }
+  
+  .grid-item-image {
+    // background: url("https:
+//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+    // background-color: $grid-item-background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ha{
+    background: url('../images/HA_7288(edit).jpg');
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sif{
+    background: url('../images/SIF2.gif');
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mm{
+    background: url('../images/Mirror5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mv{
+    background: url("../images/MusicVizMin.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .tel{
+    background: url('../images/ExaminedLifeMin.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ll{
+    background: url('../images/07Ura.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lp{
+    background: url('../images/LowPoly1.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vd{
+    background: url('../images/Drawer4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .snf{
+    background: url('../images/Stool1Min.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lr{
+    background: url('../images/LatticeTable1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mc{
+    background: url('../images/microcosm.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}
+
