@@ -1,10 +1,28 @@
-!= partial("_header", {title: "Swish & Flick Stool", description: "Project tagline."})
+!= partial("_header", {title: "Swish & Flick Stool", description: "A shelf to embody its contents"})
+.hero
+    //- .snf1
+    .snf1
+    .snf2
+    .snf3
+    .snf4
+    
+        //- img( src= "/images/Stool1.png" )
 
+.main-content
+    
+    != partial("_project", {text1: "The Swish & Flick Stool was made to create an immersive experience for the reader. By creating a physical representation of the world of Harry Potter, the reader derives a superior reading experience."})
 
-// != partial("_project", {text1: "The Swish & Flick Stool was made to create an immersive experience for the reader. By creating a physical representation of the world of Harry Potter, the reader derives a superior reading experience."})
+    !=partial("_project", {text2: "The concept for the stool was inspired by the Ottoman Stool and the Umbra Conceal Shelf. The form was accommodated into a septagon to fit the seven books in the Harry Potter series."})
 
-// !=partial("_project", {text2: "The concept for the stool was inspired by the Ottoman Stool and the Umbra Conceal Shelf. The form was accommodated into a septagon to fit the seven books in the Harry Potter series."})
+    !=partial("_project", {text3: "The legs were made of acrylic to slide between the pages, creating the illusion that the books themselves were the legs."})
 
-// !=partial("_project", {text3: "The legs were made of acrylic to slide between the pages, creating the illusion that the books themselves were the legs."})
+    //- .lefty
+    //-     img( src="/images/Stool2.png" )
+    //- .lefty
+    //-     img( src="/images/Stool3.png" )
+    //- .lefty
+    //-     img( src="/images/Stool4.png" )
+    //- .lefty
+    //-     img( src="/images/Stool5.png" )
 
 != partial("_projectGrid")

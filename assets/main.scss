@@ -94,10 +94,10 @@ p{
     &:focus,
     &:hover{
     //   opacity: .5;
-      color: darken($image-gradient-color-top, 15%);
-      color: darken($image-gradient-color-bottom, 15%);
-      color: darken($image-gradient-color-left, 15%);
-      color: darken($image-gradient-color-right, 15%);
+      color: darken($image-gradient-color-top, 5%);
+      color: darken($image-gradient-color-bottom, 5%);
+      color: darken($image-gradient-color-left, 5%);
+      color: darken($image-gradient-color-right, 5%);
     }
   }
 }
@@ -111,7 +111,20 @@ p{
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($action-color, 10%);
   $grid-item-colors: 
-    desaturate($action-color, 10%), 
+    desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%),
+    // desaturate($action-color, 10%);
+
     #29CDB5, 
     #E2C85B,
     #008698,
@@ -281,3 +294,333 @@ p{
 
 }
 
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  position: relative;
+
+  embed,
+  object,
+  iframe {
+    @include position(absolute, 0 null null 0);
+    @include size(100%);
+  }
+}
+
+.hero{
+  @include outer-container;
+  // @include span-columns(12);
+  margin-bottom: 80px;
+  margin-left: 0px;
+  height: 400px;
+
+  .div{
+    // margin-right: 10px;
+    // margin-left: -30px;
+    // margin-bottom: 100px;
+    // padding-bottom: 100px;
+    margin: 0px;
+  }
+  .br1{
+    @include span-columns(3.9125);
+    height: 400px;
+    @include background-image(url("/images/BertoiaRender1.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .br2{
+    @include span-columns(3.9125);
+    height: 400px;
+    // margin-left: -20px;
+    @include background-image(url("/images/BertoiaRender2.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .br3{
+    @include span-columns(3.9125);
+    height: 400px;
+    // margin-left: -10px;
+    @include background-image(url("/images/BertoiaRender3.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .ha1{
+    @include span-columns(12);
+    height: 400px;
+    // margin-left: -10px;
+    margin-bottom: 20px;
+    @include background-image(url("/images/HA_7288(edit).jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ha2{
+    @include span-columns(6);
+    height: 400px;
+    // margin-left: -10px;
+    @include background-image(url("/images/HA_7269.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ha3{
+    @include span-columns(6);
+    height: 400px;
+    // margin-left: -10px;
+    @include background-image(url("/images/HA_7270.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .lp1{
+    @include span-columns(3);
+    height: 400px;
+    @include background-image(url("/images/LowPoly1.gif"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lp2{
+    @include span-columns(3);
+    height: 400px;
+    @include background-image(url("/images/LowPoly5.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lp3{
+    @include span-columns(6);
+    height: 400px;
+    @include background-image(url("/images/LowPoly3.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lp4{
+    @include span-columns(3);
+    height: 400px;
+    @include background-image(url("/images/LowPoly4.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .lt1{
+    @include span-columns(4);
+    height: 400px;
+    @include background-image(url("/images/LatticeTable1.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lt2{
+    @include span-columns(4);
+    height: 400px;
+    margin-left: -10px;
+    @include background-image(url("/images/LatticeTable2.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lt3{
+    @include span-columns(3.9125);
+    height: 400px;
+    margin-left: -10px;
+    @include background-image(url("/images/LatticeTable3.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mc1{
+    @include span-columns(6);
+    height: 400px;
+    @include background-image(url("/images/microcosm.gif"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mc2{
+    @include span-columns(6);
+    height: 400px;
+    @include background-image(url("/images/microcosm2.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .mm1{
+    @include span-columns(4);
+    height: 400px;
+    @include background-image(url("/images/Mirror1.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mm2{
+    @include span-columns(4);
+    height: 400px;
+    @include background-image(url("/images/Mirror4.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mm3{
+    @include span-columns(4);
+    height: 400px;
+    @include background-image(url("/images/Mirror5.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .sif1{
+    @include span-columns(6);
+    height: 400px;
+    @include background-image(url("/images/SIF1.gif"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sif2{
+    @include span-columns(6);
+    height: 400px;
+    @include background-image(url("/images/SIF2.gif"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .snf1{
+    @include span-columns(3);
+    height: 400px;
+    @include background-image(url("/images/Stool1.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .snf2{
+    @include span-columns(3);
+    height: 400px;
+    @include background-image(url("/images/Stool2.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .snf3{
+    @include span-columns(3);
+    height: 400px;
+    @include background-image(url("/images/Stool3.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .snf4{
+    @include span-columns(3);
+    height: 400px;
+    @include background-image(url("/images/Stool4.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .vd1{
+    @include span-columns(5.8);
+    height: 400px;
+    @include background-image(url("/images/Drawer1.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vd2{
+    @include span-columns(5.8);
+    height: 400px;
+    @include background-image(url("/images/Drawer2.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vd3{
+    @include span-columns(5.8);
+    height: 400px;
+    @include background-image(url("/images/Drawer3.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vd4{
+    @include span-columns(5.8);
+    height: 400px;
+    @include background-image(url("/images/Drawer4.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vd5{
+    @include span-columns(2.9);
+    height: 400px;
+    @include background-image(url("/images/Drawer5.jpeg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vd6{
+    @include span-columns(2.9);
+    height: 400px;
+    @include background-image(url("/images/Drawer6.jpeg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+}
+
+.main-content{
+  // @include margin( null 15% null 15%);
+  @include span-columns(9);
+  @include shift(1.5);  
+  margin-bottom: 40px;
+  margin-top: 20px;
+
+  .lefty{
+    width: auto;
+    // height: 300px;
+    // float: left;
+    // margin-right: 20px;
+    // margin-bottom: 20px;
+    @include span-columns(6);
+    img{
+      width: auto;
+      height: auto;
+    }
+  }
+  .righty{
+    width: auto;
+    height: 500px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    img{
+      height: auto;
+    }
+  }
+  .hero{
+    @include outer-container;
+    @include shift(1.5);
+    img{
+      width: auto;
+      // height: 300px;
+    }
+  }
+}

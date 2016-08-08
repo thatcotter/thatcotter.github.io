@@ -1,8 +1,12 @@
-!= partial("_header", {title: "Space Is Flat", description: "Project tagline."})
+!= partial("_header", {title: "Space Is Flat", description: "Be the center of the universe"})
 
+.hero
+    .sif1
+    .sif2
 
-// != partial("_project", {text1: "This installation was made with Processing, the Kinect, and Max/MSP and inspired by Daniel Shiffman's The Nature of Code."})
+.main-content
+    != partial("_project", {text1: "This installation was made with Processing, the Kinect, and Max/MSP and inspired by Daniel Shiffman's The Nature of Code."})
 
-// !=partial("_project", {text2: "In processing, I made a variety of yellow objects representing celestial bodies. When someone moves into the Kinect's vision, a grey object is generated in the sketch that follows their movement and causes the yellow objects to orbit them. In this way, I attempted to illustrate the effects of interstellar gravity, using the participants' bodies and movements as the examples of gravity."})
+    !=partial("_project", {text2: "In processing, I made a variety of yellow objects representing celestial bodies. When someone moves into the Kinect's vision, a grey object is generated in the sketch that follows their movement and causes the yellow objects to orbit them. In this way, I attempted to illustrate the effects of interstellar gravity, using the participants' bodies and movements as the examples of gravity."})
 
 != partial("_projectGrid")

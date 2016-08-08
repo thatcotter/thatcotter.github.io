@@ -1,8 +1,13 @@
-!= partial("_header", {title: "Crave You", description: "Project tagline."})
+!= partial("_header", {title: "Crave You", description: "They stare at me while I stare at you"})
 
 
-// != partial("_project", {text1: "Music Vizualization: Crave You by Flight Facilities"})
+.video-wrapper
+    <iframe src="https://player.vimeo.com/video/76063524" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+.main-content        
+    <p><a href="https://vimeo.com/76063524">Music Viz [Crave You]</a> from <a href="https://vimeo.com/user9745739">Andrew Cotter</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
-// !=partial("_project", {text2: "Modeled and animated in Cinema 4D"})
+    != partial("_project", {text2: "Music Vizualization: Crave You by Flight Facilities"})
+
+    !=partial("_project", {text3: "Modeled and animated in Cinema 4D"})
 
 != partial("_projectGrid")
