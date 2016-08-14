@@ -1,42 +1,44 @@
-// @import "../mdl/material";
-@import "../bourbon/bourbon";
+// @import "all the scss libs"
+@import "../bourbon/bourbon"; 
 @import "../base/grid-settings";
 @import "../neat/neat";
 @import "../base/base";
 
 
 body{
-  padding: 50px 20px 0;
-  background: #f4f4f7;
-  color: #444;
-  margin: 0;
-  @include transition( all 0.8s);
+  padding: 50px 20px 0; //pad 50 top, 20 sides, 0 bottom
+  background: #f4f4f7; //background color: 
+  color: #444; //text color: 
+  margin: 0; //margin 0
+  @include transition( all 0.8s); //css transition takes 0.8s
 }
 
 h1{
-  font-size: 65px;
-  line-height: 1.2em;
-  border-bottom: #CCC solid 1px;
-  padding: 20px 0;
+  font-size: 52px; //h1 size 65px
+  line-height: 1.2em; //
+  border-bottom: #CCC solid 1px; //gives the border a small underline
+  padding: 20px 0; // top and bottom pad of 20px
+  margin-top: -5%;
 }
 h2{
     // font-weight: 400;
-    padding: 0 0 20px 0;
+    padding: 0 0 20px 0; //bottom pad of 20px 
+    margin-top: -20px;
 }
 h3{
-  font-weight: 300;
+  font-weight: 400; //300 font-weight
 //   padding: 20px 0;
 }
 
 p{
     // padding: 5px;
 }
-@mixin grid-item-columns($columns) {
-  width: (100% / 12) * $columns;
+@mixin grid-item-columns($columns) { //create a grid based on the columns variable
+  width: (100% / 12) * $columns; // width of each column is 100 / 12
 }
 
 
-.image-gradient-dynamic {
+.image-gradient-dynamic { //class
   $image-gradient-color-top: red; 
   $transparency-top: 0.9;
   $image-gradient-color-bottom: green; 
@@ -49,38 +51,38 @@ p{
   $horizontal-angle: 90deg;
   
 //   line-height: 0;
-  position: relative;
+  position: relative; 
 //   width: 100%;
 
-  img {
-   height: auto;
+  img { //image style
+   height: auto; //automatically size the height
    left: 0; 
    position: relative;
    top: 0;
    width: 100%;
    background: url("https:
-//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");//filler image
    // background-color: $grid-item-background;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+   background-position: center; //center the image
+   background-repeat: no-repeat; //dont tile the image
+   background-size: cover; //image takes up the entire element
   }
 
   .copy {
-    @include transform(translate(-50%, -50%));
-    left: 50%;
+    @include transform(translate(-50%, -50%)); //center the text
+    left: 50%; // 50% to the right
     margin: auto;
     position: absolute;
-    text-align: center;
-    top: 50%;
-    z-index: 999;
+    text-align: center; //centes
+    top: 50%; // 50% down 
+    z-index: 999; //put it in front
   }
 
-  .overlay {
+  .overlay { //gives div an overlay
     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
       transparentize($image-gradient-color-bottom, $transparency-bottom));
     display: block;
-    @include position(absolute, 0px 0px 0px 0px);
+    @include position(absolute, 0px 0px 0px 0px); 
 
     &:after {
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
@@ -90,10 +92,10 @@ p{
       display: block;
       @include transition-property(transform, opacity);
     }
-    &:active,
+    &:active, //change the opacity when 
     &:focus,
     &:hover{
-    //   opacity: .5;
+      opacity: .75;
       color: darken($image-gradient-color-top, 5%);
       color: darken($image-gradient-color-bottom, 5%);
       color: darken($image-gradient-color-left, 5%);
@@ -197,28 +199,15 @@ p{
     color: transparentize($grid-item-color, 0.1);
     line-height: 1.5em;
     margin: auto;
-    
-    // @include media($medium-screen) {
-    //   max-width: 70%;
-    // }
   }
 
   .grid-item-big {
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
-    
-    // p {
-    //   @include media($medium-screen) {
-    //     max-width: 60%;
-    //   }  
-    // }
   }
   
   .grid-item-image {
-    // background: url("https:
-//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
-    // background-color: $grid-item-background;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -622,5 +611,19 @@ p{
       width: auto;
       // height: 300px;
     }
+  }
+}
+
+.pageTitle{
+  color: black
+}
+
+.links{
+  text-align: right;
+  margin-top: -2%;
+  // position: fixed;
+  li{
+    display: inline;
+    font-size: 18px;
   }
 }

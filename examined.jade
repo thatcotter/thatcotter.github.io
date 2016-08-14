@@ -1,9 +1,13 @@
+// h1 and h2
 != partial("_header", {title: "The Examined life", description: "My life as a movie trailer"})
 
+// video div
 .video-wrapper
     <iframe src="https://player.vimeo.com/video/76842273" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+// main content div
 .main-content
     != partial("_project", {text1: "This is a mock trailer that I made as a preview for a hypothetical movie about my life as part of a Professional Communications class"})
 
+// include the project grid
 != partial("_projectGrid")

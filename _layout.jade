@@ -1,15 +1,26 @@
 doctype
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    - var title = title || "Andrew Cotter"
+//-this is html
+html(lang="en") 
+  //-this ir loaded before the body
+  head 
+    meta(charset="utf-8") 
+    //-title of the webpage
+    - var title = title || "Andrew Cotter" 
     title #{title}
-    link(rel="stylesheet" href="/assets/main.css")
+    //import the scss
+    link(rel="stylesheet" href="/assets/main.css") 
     
-  body
-    ul
-      li: a(href="/") Home
-      li: a(href="/about") About
-      li: a(href="/contact") Contact
-      li: a(href="/images/ACotterResume:CV.pdf") Resume/CV
-    != yield
+  //all body elements
+  body 
+    //unordered list
+    ul.links
+      //- list item links to homepage
+      li: a(href="/") Home 
+      //- list item links to about
+      li: a(href="/about") About 
+      //- list item links to contact
+      li: a(href="/contact") Contact 
+      //- list item links to resume
+      li: a(href="/images/ACotterResume:CV.pdf") Resume/CV 
+    //end of layout, the rest of the page is here
+    != yield 

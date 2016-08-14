@@ -1,13 +1,17 @@
+// h1 and h2
 != partial("_header", {title: "Crave You", description: "They stare at me while I stare at you"})
 
-
+// div for the video
 .video-wrapper
     <iframe src="https://player.vimeo.com/video/76063524" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-.main-content        
+// main content div
+.main-content 
+    // paragraph link       
     <p><a href="https://vimeo.com/76063524">Music Viz [Crave You]</a> from <a href="https://vimeo.com/user9745739">Andrew Cotter</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
+    //include text
     != partial("_project", {text2: "Music Vizualization: Crave You by Flight Facilities"})
 
     !=partial("_project", {text3: "Modeled and animated in Cinema 4D"})
 
+// include project grid
 != partial("_projectGrid")

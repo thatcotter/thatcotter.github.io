@@ -1,12 +1,19 @@
+//- h1 and h2
 != partial("_header", {title: "Microcosm", description: "What happens when we as human beings confront a world that is radically unhuman, impersonal, and even indifferent to the human?"})
 
+// hero images div
 .hero
+    //-  image 1
     .mc1
+    //- image 2
     .mc2
 
+//- main content
 .main-content
+    //- paragraph text
     != partial("_project", {text1: "This project was an entry in the Philly Game Forge's Tiny Jam in 2016. The primary constraint was that the project could only use 10KB of code."})
 
     !=partial("_project", {text2: "Using similar Newtonian physics to my Space Is Flat project, i made an asteroids-like game where the player has to orbit a field of planetoids as long as possible without crashing."})
 
+//- include project grid
 != partial("_projectGrid")
