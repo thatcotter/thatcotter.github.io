@@ -219,6 +219,13 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .tide{
+    background: url('../images/tide.gif');
+    background-color: $grid-item-background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .sif{
     background: url('../images/SIF2.gif');
     background-color: $grid-item-background;
@@ -270,7 +277,7 @@ p{
   }
   .lr{
     background: url('../images/LatticeTable1.jpg');
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
   }
