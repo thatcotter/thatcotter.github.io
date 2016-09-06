@@ -6,7 +6,7 @@ body{
 h1{
     font-size: 48px;
     text-align: left;
-    margin-left: 33vw;
+    margin-left: 37vw;
     color: #932B77;
 }
 
@@ -18,7 +18,7 @@ li{
 }
 
 input{
-    margin-left: 40vw;
+    margin-left: 42vw;
 }
 
 #todos{
@@ -27,7 +27,7 @@ input{
 
 
 .listButton{
-    margin-left: 20vw;
+    margin-left: 15vw;
     margin-top: -4vh;
 }
 .toBottom{
