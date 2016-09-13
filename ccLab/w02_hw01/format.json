@@ -1,0 +1,9 @@
+{
+  "<start>": "<line-1> % <line-2> % <line-3>",
+  "<line-1>": "<subject> <verb> <adverb>",
+  "<line-2>": "<subject> <verb> <adverb>",
+  "<line-3>": "<subject> <verb> <adverb>",
+  "<subject>": "wheels | the stars | We | none of us | the moon and clouds | they | you | the lights | trees | the cars",
+  "<verb>": "slide | drop | talk | saw | throb | are | breathe | whine | will only | break",
+  "<adverb>": "loosely | away | listening | the road | peacfully | later | accidentally"
+}
