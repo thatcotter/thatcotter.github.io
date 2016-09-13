@@ -4,6 +4,6 @@
   "<line-2>": "<subject> <verb> <adverb>",
   "<line-3>": "<subject> <verb> <adverb>",
   "<subject>": "the wheels | the stars | We | none of us | the moon and clouds | they | you | the lights | trees | the cars",
-  "<verb>": "slide | drop | talk | saw | throb | are | breathe | whine | break | sing | pause | didn't see",
-  "<adverb>": "loosely | away | listening | the road | peacfully | later | accidentally | woefully | in excess | tepidly "
+  "<verb>": "slide | drop | talk | saw | throb | breathe | whine | break | sing | pause | didn't see | await",
+  "<adverb>": "loosely | away | listening | the road | peacfully | later | accidentally | woefully | in excess | tepidly"
 }
