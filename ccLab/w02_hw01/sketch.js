@@ -11,7 +11,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(10);
   noStroke();
-  textFont(font, (width + height) / 25);
+  textFont(font, (width + height) / 30);
   textAlign(CENTER);
 
   grammar = new RiGrammar(yaml.join('\n'));
