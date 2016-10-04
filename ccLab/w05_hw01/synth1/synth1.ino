@@ -1,7 +1,6 @@
 
 #include "volume2.h"
 Volume vol;
-#define photoPin A0;
 
 int photocell;
 int photwocell;
@@ -9,6 +8,7 @@ int loudness;
 
 void setup() {
   pinMode( A0, INPUT );
+  pinMode( A1, INPUT );
 }
 
 void loop() {
