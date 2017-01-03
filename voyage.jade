@@ -1,0 +1,20 @@
+
+// h1 and h2
+!= partial("_header", {title: "Voyage", description: "A Newtonian Physics-based Puzzle Game"})
+
+
+
+// div for the video
+.video-wrapper
+    <iframe src="https://player.vimeo.com/video/197938614" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+// main content div
+.main-content     
+    //include text
+    -var urlGH = 'https://github.com/reginaflores/AlgoSims2016';
+    p Final Project for #[a(href= urlGH) Algorithmic Simulations]
+
+    -var urlOF = 'http://openframeworks.cc/';
+    p Made with #[a(href= urlOF) openframeworks]
+
+// include project grid
+!= partial("_projectGrid")
