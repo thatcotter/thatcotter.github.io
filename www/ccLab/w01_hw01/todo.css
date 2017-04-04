@@ -1,0 +1,41 @@
+
+body{
+    font-family: 'Slabo 27px', serif;
+}
+
+h1{
+    font-size: 48px;
+    text-align: left;
+    margin-left: 34vw;
+    color: #932B77;
+    font-family: 'Poppins', sans-serif;
+}
+
+li{
+    font-size: 24px;
+    list-style-type: none;
+    text-align: left;
+    margin-left: 35vw;
+}
+
+input{
+    margin-left: 42vw;
+}
+
+#todos{
+    /*width: 100%;*/
+}
+
+
+.listButton{
+    margin-left: 15vw;
+    margin-top: -4vh;
+}
+.toBottom{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.remove{
+    padding-left: -2px;
+    padding-right: -2px;
+}
