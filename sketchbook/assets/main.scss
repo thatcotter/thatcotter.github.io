@@ -5,7 +5,7 @@
 
 body{
   font-family: "Helvetica";
-  text-align: center;
+  // text-align: center;
   padding: 50px 20px 0;
   background: #f4f4f7;
   color: #444;
@@ -23,11 +23,12 @@ h1{
 
 h2{
     // font-weight: 400;
-    padding: 0 0 20px 0; //bottom pad of 20px 
+    padding: 0 0 20px 20px; //bottom pad of 20px 
 }
 
 h3{
   font-weight: 200px;
+  padding: 0 0 20px 20px; //bottom pad of 20px 
 }
 
 p{
@@ -64,8 +65,16 @@ li{
   @include span-columns(3);
 }
 
+.grid-sixth{
+  @include span-columns(2);
+}
+
 #bgs{
   padding: 0px;
   position: fixed;
   z-index: -1;
+}
+
+iframe{
+  // margin-left: -30%;
 }

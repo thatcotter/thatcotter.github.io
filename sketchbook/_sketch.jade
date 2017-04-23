@@ -1,0 +1,209 @@
+#panel-container
+    #left-panel
+        #code.code
+            //- var diameter;
+            //- var radius;
+
+            //- var points = [];
+
+            //- var mode = false;
+
+            //- var theta;
+
+            //- setup = function()
+            //- {
+            //- createCanvas( windowWidth, windowHeight );
+            //- diameter = 10;
+            //- radius = diameter/2;
+            //- theta = 0;
+            //- }
+
+            //- draw = function()
+            //- {
+            //-     background( 0 );
+            //-     theta += 0.0002;
+            //-     push();
+
+            //-     if ( mouseIsPressed ) 
+            //-     {
+            //-         var vec = createVector( mouseX, mouseY );
+            //-         points.push(vec);
+            //-         theta = 0;
+            //-         // print(points.length);
+            //-     }
+            //- //Mode 1: lines
+            //- if (mode === false) 
+            //- {
+            //-     for (var i = 1; i < points.length; i++)
+            //-     {
+            //-         var offsetPres = 0;
+            //-         var offsetPrev = 0;
+
+            //-         if ( mouseIsPressed === false )
+            //-         {
+            //-             offsetPres = sin(theta * points[i].y) * 1.5;
+            //-             offsetPrev = sin(theta * points[i-1].y) * 1.5;
+            //-             // theta += 0.000002;
+            //-         }
+
+            //-         var pres = points[i];
+            //-         pres.x += offsetPres;
+            //-         var prev = points[i-1];
+            //-         if( i-1 === 0 )
+            //-         {
+            //-             prev.x += offsetPrev;
+            //-         }
+            //-         stroke(255);
+            //-         line( pres.x, pres.y, prev.x, prev.y );
+            //-     }
+            //- }
+            //- //Mode 2: dots
+            //- if (mode === true) 
+            //- {
+            //-         var offsetPres = 0;
+
+            //-         for (var i = 0; i < points.length; i++)
+            //-         {
+            //-             if ( mouseIsPressed === false )
+            //-             {
+            //-                 offsetPres = sin(theta * points[i].y) * 1.5;
+            //-                 // theta += 0.000002;
+            //-             }
+            //-             var pres = points[i];
+            //-             pres.x += offsetPres;
+            //-             text( i, pres.x, pres.y );
+            //-         }
+            //-     }
+
+            //-     pop();
+            //-     ellipse( mouseX-radius, mouseY-radius, diameter, diameter );
+            //- }
+
+            //- mousePressed = function()
+            //- {
+            //- // console.log("click");
+            //-     points = [];
+            //- }
+
+            //- keyTyped = function()
+            //- {
+            //-     console.log( key );
+            //-     if( key === ' ' )
+            //-     {
+            //-         mode = !mode;
+            //-     }
+            //-     if( key == 'c' )
+            //-     {
+            //-         points = [];
+            //-     }
+            //- }
+    #right-panel
+        #canvas-handle
+//-  <div id="panel-container">
+//-             <div id="left-panel">
+//-                 <textarea id="code" name="code">
+
+//- var diameter;
+//- var radius;
+
+//- var points = [];
+
+//- var mode = false;
+
+//- var theta;
+
+//- setup = function()
+//- {
+//-   createCanvas( windowWidth, windowHeight );
+//-   diameter = 10;
+//-   radius = diameter/2;
+//-   theta = 0;
+//- }
+
+//- draw = function()
+//- {
+//-   background( 0 );
+//-   theta += 0.0002;
+//-   push();
+
+//-   if ( mouseIsPressed ) 
+//-   {
+//-       var vec = createVector( mouseX, mouseY );
+//-       points.push(vec);
+//-       theta = 0;
+//-       // print(points.length);
+//-   }
+//-   //Mode 1: lines
+//-   if (mode === false) 
+//-   {
+//-       for (var i = 1; i < points.length; i++)
+//-       {
+//-           var offsetPres = 0;
+//-           var offsetPrev = 0;
+
+//-           if ( mouseIsPressed === false )
+//-           {
+//-               offsetPres = sin(theta * points[i].y) * 1.5;
+//-               offsetPrev = sin(theta * points[i-1].y) * 1.5;
+//-               // theta += 0.000002;
+//-           }
+
+//-           var pres = points[i];
+//-           pres.x += offsetPres;
+//-           var prev = points[i-1];
+//-           if( i-1 === 0 )
+//-           {
+//-               prev.x += offsetPrev;
+//-           }
+//-           stroke(255);
+//-           line( pres.x, pres.y, prev.x, prev.y );
+//-       }
+//-   }
+//-   //Mode 2: dots
+//-   if (mode === true) 
+//-   {
+//-       var offsetPres = 0;
+
+//-       for (var i = 0; i < points.length; i++)
+//-       {
+//-           if ( mouseIsPressed === false )
+//-           {
+//-               offsetPres = sin(theta * points[i].y) * 1.5;
+//-               // theta += 0.000002;
+//-           }
+//-           var pres = points[i];
+//-           pres.x += offsetPres;
+//-           text( i, pres.x, pres.y );
+//-       }
+//-   }
+
+//-   pop();
+//-   ellipse( mouseX-radius, mouseY-radius, diameter, diameter );
+//- }
+
+//- mousePressed = function()
+//- {
+//-   // console.log("click");
+//-   points = [];
+//- }
+
+//- keyTyped = function()
+//- {
+//-   console.log( key );
+//-   if( key === ' ' )
+//-   {
+//-       mode = !mode;
+//-   }
+//-   if( key == 'c' )
+//-   {
+//-       points = [];
+//-   }
+//- }
+        //-         </textarea>
+        //-     </div>
+
+
+        //-     <div id="right-panel">
+        //-         <div id="canvas-handle"></div>
+        //-     </div>
+        //- </div>
