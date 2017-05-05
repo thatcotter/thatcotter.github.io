@@ -10,6 +10,6 @@ $(document).ready(function(){
         mode: "text/x-csrc"
       });
 
-	sketchEditor.setOption("theme", "solarized");
+	sketchEditor.setOption("theme", "monokai");
 
 })

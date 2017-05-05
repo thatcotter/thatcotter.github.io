@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="codemirror/addon/fold/foldgutter.css">
         <link rel="stylesheet" href="codemirror/addon/dialog/dialog.css">
         <link rel="stylesheet" href="codemirror/theme/solarized.css">
-        
         <link rel="stylesheet" href="css/style.css">
 
         <script type="text/javascript" language="javascript" src="codemirror/lib/codemirror.js"></script>
@@ -157,41 +156,69 @@
             <div id="left-panel">
                 <textarea id="code" name="code">
 
-var max_distance;
-var distances = [];
-var maxDistance;
-var spacer;
+var diameter;
+var radius;
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  maxDistance = dist(width/2, height/2,
-                     width, height);
-  for (var x = 0; x < width; x++) {
-    distances[x] = []; // create nested array
-    for (var y = 0; y < height; y++) {
-      var distance = dist(width/2, height/2, x, y);
-      distances[x][y] = distance/maxDistance * 255;
-    }
-  }
-  spacer = 10;
-  noLoop();  // Run once and stop
+var points = [];
+
+var mode = false;
+
+function setup()
+{
+    diameter = 10;
+    radius = diameter/2;
 }
 
-function draw() {
-  background(0);
-  // This embedded loop skips over values
-  // in the arrays based on
-  // the spacer variable, so there are more
-  // values in the array
-  // than are drawn here. Change the value 
-  // of the spacer variable
-  // to change the density of the points
-  for (var x = 0; x < width; x += spacer) {
-    for (var y = 0; y < height; y += spacer) {
-      stroke(distances[x][y]);
-      point(x + spacer/2, y + spacer/2);
+function draw()
+{
+    createCanvas( windowWidth, windowHeight );
+    background( 0 );
+
+    if (mouseIsPressed) 
+    {
+        var vec = createVector( mouseX, mouseY );
+        points.push(vec);
     }
-  }
+    //Mode 1: lines
+    if (mode === false) 
+    {
+        for (var i = 1; i < points.length; i++)
+        {
+            var pres = points[i];
+            var prev = points[i-1];
+            stroke(255);
+            line( pres.x, pres.y, prev.x, prev.y );
+        }
+    }
+    //Mode 2: dots
+    if (mode === true) 
+    {
+        for (var i = 0; i < points.length; i++)
+        {
+            var pres = points[i];
+            text( i, pres.x, pres.y );
+        }
+    }
+
+    ellipse( mouseX-radius, mouseY-radius, diameter, diameter );
+}
+
+function mousePressed()
+{
+    points = [];
+}
+
+function keyTyped()
+{
+    console.log( key );
+    if( key === ' ' )
+    {
+        mode = !mode;
+    }
+    if( key == 'c' )
+    {
+        points = [];
+    }
 }
 
 
