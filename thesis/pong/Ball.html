@@ -26,12 +26,12 @@
  ...
 }</code></pre><p>You can also manually enter in numbers for the vector if you know how big your canvas is, but entering it like this saves us the trouble of going back and changing it later, in case the canvas size changes.</p>
 
-<p>We should also use another variable to define how big the ball is. You can go with whatever number seems reasonable, but how about <code>25</code> for now? We can always change it later if We feel like it&#39;s too big or small for the game.</p><pre> <code></code>function Ball()
+<p>We should also use another variable to define how big the ball is. You can go with whatever number seems reasonable, but how about <code>25</code> for now? We can always change it later if We feel like it&#39;s too big or small for the game.</p><pre> <code>function Ball()
 {
   this.position = createVector(width/2, height/2);
   this.size = 25;
   ...
-}</pre><p>Now that the ball is <em>somewhere</em> on the screen and it has a size, lets make sure we have a way to see it by filling in the ball&#39;s <code>draw</code> function.  (This example is assuming that you want a ball that is white and without a stroke, but you can change that at your discretion)</p><pre> <code>function Ball()
+}</code></pre><p>Now that the ball is <em>somewhere</em> on the screen and it has a size, lets make sure we have a way to see it by filling in the ball&#39;s <code>draw</code> function.  (This example is assuming that you want a ball that is white and without a stroke, but you can change that at your discretion)</p><pre> <code>function Ball()
 {
   ...
   this.draw = function ()
