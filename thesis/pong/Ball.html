@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>tAS: Pong</title><link rel="stylesheet" href="main.css"></head><body><link rel="stylesheet" type="text/css" media="all" href="../assets/css/main.css"><div id="header" class="-2u"><div class="10u"><h1>Ball</h1>
+<!DOCTYPE html><html><head><title>tAS: Pong</title><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script></head><body><link rel="stylesheet" type="text/css" media="all" href="../assets/css/main.css"><div id="header" class="-2u"><div class="10u"><h1>Ball</h1>
 
 <p>Let&#39;s make a quick list of things that the Ball does. First thing we know is that it moves, and can move in all available 2D directions. From there, we also know that It can bounce off of the Paddles, and the top and bottom of the screen. And when it goes past the left and right sides of the screen, the score changes, which then causes it to reset its position in the center of the screen.</p>
 
@@ -73,8 +73,8 @@
 <p>You coud just give the <code>x</code> variable a random value, but that solution could still favor going to one player first over the other.</p><pre> <code>function Ball()
 {
   ...
-  this.velocity = createVector(random(-1, 1),
-                              random(-1, 1));
+  this.velocity = createVector(random(-3, 3),
+                              random(-3, 3));
   ...
 }</code></pre><p>Maybe we can figure out a way to make the ball alternate the initial x value to positive or negative? For now I&#39;ll leave that to your imagination, but we&#39;ll get into this again once we get into resetting the ball after it goes off the screen.</p>
 
@@ -103,8 +103,8 @@
     if( this.position.x &lt 0 || this.position.x &gt width )
     {
       this.position = createVector(width/2, height/2);
-      this.velocity = createVector(random(-1, 1),
-                              random(-1, 1));
+      this.velocity = createVector(random(-3, 3),
+                              random(-3, 3));
     }
   }
   ...
@@ -118,7 +118,7 @@
     var leftBound = pad.position.x - pad.width/2;
     var rightBound = pad.position.x + pad.width/2;
     var topBound = pad.position.y - pad.height/2;
-    var bottomBound = pad.position.y - pad.height/2;
+    var bottomBound = pad.position.y + pad.height/2;
     
     if( this.position.x &gt leftBound &amp&amp this.position.x &lt rightBound )
     {
