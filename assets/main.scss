@@ -4,7 +4,6 @@
 @import "../neat/neat";
 @import "../base/base";
 
-
 body{
   padding: 50px 20px 0; //pad 50 top, 20 sides, 0 bottom
   background: #f4f4f7; //background color: 
@@ -15,13 +14,14 @@ body{
 
 h1{
   font-size: 52px; //h1 size 65px
+  font-weight: 400;
   line-height: 1.2em; //
   border-bottom: #CCC solid 1px; //gives the border a small underline
   padding: 20px 0; // top and bottom pad of 20px
-  margin-top: -5%;
+  // margin-top: -5%;
 }
 h2{
-    // font-weight: 400;
+    font-weight: 300;
     padding: 0 0 20px 0; //bottom pad of 20px 
     margin-top: -20px;
 }
@@ -212,6 +212,13 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .button{
+    background: url('../images/buttons-small.png');
+    background-color: $grid-item-background;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .ha{
     background: url('../images/HA_7288(edit).jpg');
     background-color: $grid-item-background;
@@ -230,6 +237,12 @@ p{
     background: url('../images/SIF2.gif');
     background-color: $grid-item-background;
     background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .magical-mecha{
+    background: url('../images/magic-mecha2.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -259,6 +272,12 @@ p{
   }
   .lp{
     background: url('../images/LowPoly1.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .phillytron{
+    background: url('../images/phillytron.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -442,6 +461,15 @@ p{
     background-size: cover;
   }
 
+  .magic-mecha1{
+    @include span-columns(4);
+    height: 400px;
+    @include background-image(url("/images/magic-mecha1.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .mc1{
     @include span-columns(6);
     height: 400px;
@@ -608,18 +636,18 @@ p{
   }
   .righty{
     width: auto;
-    height: 500px;
+    // height: 500px;
     float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
-
+    // margin-left: 20px;
+    // margin-bottom: 20px;
+    @include span-columns(6);
     img{
       height: auto;
     }
   }
   .hero{
     @include outer-container;
-    @include shift(1.5);
+    // @include shift(1.5);
     img{
       width: auto;
       // height: 300px;
@@ -639,4 +667,8 @@ p{
     display: inline;
     font-size: 18px;
   }
+}
+
+.instagram-media{
+  // margin-left: 50%;
 }

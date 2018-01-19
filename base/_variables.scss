@@ -1,11 +1,15 @@
 // Typography
-@import url(https://fonts.googleapis.com/css?family=PT+Mono|Oswald:400,700,300);
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@font-face {
+    font-family: 'Circular';
+    src: url(fonts/circular-medium.otf) format('opentype');
+}
 
-$pt-mono: "PT Mono", monospace;
-$oswald: "Oswald", sans-serif;
+$body: "Fira Mono", monospace;
+$head: "Circular", sans-serif;
 
-$base-font-family: $pt-mono;
-$heading-font-family: $oswald;
+$base-font-family: $body;
+$heading-font-family: $head;
 
 // Font Sizes
 $base-font-size: 1.2em;
