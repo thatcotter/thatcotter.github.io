@@ -21,7 +21,7 @@ h1{
   // margin-top: -5%;
 }
 h2{
-    font-weight: 300;
+    font-weight: 200;
     padding: 0 0 20px 0; //bottom pad of 20px 
     margin-top: -20px;
 }
@@ -346,7 +346,7 @@ p{
   .br1{
     @include span-columns(3.9125);
     height: 400px;
-    @include background-image(url("/images/BertoiaRender1.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/BertoiaRender1.jpg"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -355,7 +355,7 @@ p{
     @include span-columns(3.9125);
     height: 400px;
     // margin-left: -20px;
-    @include background-image(url("/images/BertoiaRender2.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/BertoiaRender2.jpg"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,7 +364,7 @@ p{
     @include span-columns(3.9125);
     height: 400px;
     // margin-left: -10px;
-    @include background-image(url("/images/BertoiaRender3.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/BertoiaRender3.jpg"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -375,7 +375,7 @@ p{
     height: 400px;
     // margin-left: -10px;
     margin-bottom: 20px;
-    @include background-image(url("/images/HA_7288(edit).jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/HA_7288(edit).jpg"));
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -384,7 +384,7 @@ p{
     @include span-columns(6);
     height: 400px;
     // margin-left: -10px;
-    @include background-image(url("/images/HA_7269.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/HA_7269.jpg"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -393,7 +393,7 @@ p{
     @include span-columns(6);
     height: 400px;
     // margin-left: -10px;
-    @include background-image(url("/images/HA_7270.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/HA_7270.jpg"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -437,7 +437,7 @@ p{
   .lt1{
     @include span-columns(4);
     height: 400px;
-    @include background-image(url("/images/LatticeTable1.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/LatticeTable1.jpg"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -446,7 +446,7 @@ p{
     @include span-columns(4);
     height: 400px;
     margin-left: -10px;
-    @include background-image(url("/images/LatticeTable2.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/LatticeTable2.jpg"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -455,7 +455,7 @@ p{
     @include span-columns(3.9125);
     height: 400px;
     margin-left: -10px;
-    @include background-image(url("/images/LatticeTable3.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/LatticeTable3.png"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -491,7 +491,7 @@ p{
   .mm1{
     @include span-columns(4);
     height: 400px;
-    @include background-image(url("/images/Mirror1.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/Mirror1.png"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -499,7 +499,7 @@ p{
   .mm2{
     @include span-columns(4);
     height: 400px;
-    @include background-image(url("/images/Mirror4.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/Mirror4.png"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -507,7 +507,7 @@ p{
   .mm3{
     @include span-columns(4);
     height: 400px;
-    @include background-image(url("/images/Mirror5.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+    @include background-image(url("/images/Mirror5.png"));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
