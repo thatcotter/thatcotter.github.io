@@ -32,6 +32,11 @@ function draw()
     myScoreBoard.draw();
 }
 
+function keyPressed(){
+    // Do something
+    return false; // prevent any default behaviour
+  }
+
 
 function Ball()
 {
@@ -57,12 +62,12 @@ function Ball()
     {
       if( this.position.x < 0 )
       {
-        board.p1Score++;
+        board.p2Score++;
         this.position = createVector(width/2, height/2);
         this.velocity = createVector(random(-3, 3),
                                      random(-3, 3));
       }
-      if( this.position.x < 0 || this.position.x > width )
+      if( this.position.x > width )
       {
         board.p1Score++;
         this.position = createVector(width/2, height/2);
@@ -77,16 +82,13 @@ function Ball()
       var rightBound = pad.position.x + pad.width/2;
       var topBound = pad.position.y - pad.height/2;
       var bottomBound = pad.position.y + pad.height/2;
-
-    //   fill(255,0,0);
-    //   ellipse( leftBound, topBound, 10, 10 );
-    //   ellipse( rightBound, bottomBound, 10, 10 );
       
       if( this.position.x > leftBound && this.position.x < rightBound )
       {
         if( this.position.y > topBound && this.position.y < bottomBound )
         {
             this.velocity.x *= -1;
+            this.velocity.y *= -1;
         }
       }
     }

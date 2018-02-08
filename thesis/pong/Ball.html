@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>tAS: Pong</title><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script></head><body><link rel="stylesheet" type="text/css" media="all" href="../assets/css/main.css"><div id="header" class="-2u"><div class="10u"><h1>Ball</h1>
+<!DOCTYPE html><html><head><title>tAS: Pong</title><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script></head><body><link rel="stylesheet" type="text/css" media="all" href="../assets/sass/main.css"><div id="header" class="-2u"><div class="10u"><h1>Ball</h1>
 
 <p>Let&#39;s make a quick list of things that the Ball does. First thing we know is that it moves, and can move in all available 2D directions. From there, we also know that It can bounce off of the Paddles, and the top and bottom of the screen. And when it goes past the left and right sides of the screen, the score changes, which then causes it to reset its position in the center of the screen.</p>
 
@@ -39,27 +39,24 @@
     fill(255);
     noStroke();
     ellipse(this.position.x, this.position.y,
-            this.size.x, this.size.y);
+            this.size, this.size);
   }
 }</code></pre><p>Just by passing in the ball&#39;s size to the <code>ellipse()</code> function, we can draw the ball, as long as its position is inside the canvas, and its size isn&#39;t zero.</p>
 
-<p>Now lets take the ball class we have and put it into our sketch as an object.</p>
-
-<p>pre 
-  code
-    | var myBall;
-    | 
-    | function setup()
-    | {
-    |   createCanvas(windowWidth, windowHeight);
-    |   myBall = new Ball();
-    | }
-    | 
-    | function draw()
-    | {
-    |   background(0);
-    |   myBall.display();
-    | }</p><h3>Moving the Ball</h3>
+<p>Now lets take the ball class we have and put it into our sketch as an object.</p><pre> <code>var myBall;
+ 
+function setup()
+{
+  createCanvas(windowWidth, windowHeight);
+  myBall = new Ball();
+}
+ 
+function draw()
+{
+  background(0);
+  myBall.move();
+  myBall.draw();
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="ball_sketches/4-ball.html"></iframe><h3>Moving the Ball</h3>
 
 <p>Cool! Now lets get started on moving that ball around!</p>
 
@@ -73,10 +70,14 @@
 <p>You coud just give the <code>x</code> variable a random value, but that solution could still favor going to one player first over the other.</p><pre> <code>function Ball()
 {
   ...
-  this.velocity = createVector(random(-3, 3),
-                              random(-3, 3));
+  this.velocity = createVector(random(-1, 1),
+                               random(-1, 1));
+  this.move = function()
+  {
+    this.position.add(this.velocity);
+  }
   ...
-}</code></pre><p>Maybe we can figure out a way to make the ball alternate the initial x value to positive or negative? For now I&#39;ll leave that to your imagination, but we&#39;ll get into this again once we get into resetting the ball after it goes off the screen.</p>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="ball_sketches/6-ball.html"></iframe><p>Maybe we can figure out a way to make the ball alternate the initial x value to positive or negative? For now I&#39;ll leave that to your imagination, but we&#39;ll get into this again once we get into resetting the ball after it goes off the screen.</p>
 
 <h3>Bouncing the Ball</h3>
 
@@ -93,7 +94,7 @@
     }
   }
   ...
-}</code></pre><h3>Resetting the Ball</h3>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="ball_sketches/7-ball.html"></iframe><h3>Resetting the Ball</h3>
 
 <p>Finally, we also want the ball to come back to the center after it goes off the screen. We can do this with another <code>if</code> statement inside the <code>leftScreen</code> function.</p><pre> <code>function Ball()
 {
@@ -108,7 +109,7 @@
     }
   }
   ...
-}</code></pre><h2>If you have Paddles:</h2>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="ball_sketches/8-ball.html"></iframe><h2>If you have Paddles:</h2>
 
 <p>Okay, if you have the paddles, we can start making the ball bounce off of them. Although we could add a bunch of logic on to the existing bounce function, we can make things easier on ourselves by adding a new function that checks if it has hit one of the paddles and inverts the <code>x</code> value of the speed.</p><pre> <code>function Ball()
 {
@@ -156,4 +157,4 @@ function draw()
   myBall.leftScreen();
   myBall.draw();
   
-}</code></pre><h2>If you have a scoreboard:</h2></div></div></body></html>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="ball_sketches/10-ball.html"></iframe></div></div><footer id="footer"><div class="inner"><ul class="copyright"><li class="nav-link"><h3> <a href="index.html">Back</a></h3></li><li class="nav-link"><h3><a href="paddles.html">Paddles</a></h3></li><li class="nav-link"><h3><a href="scoreboard.html">Scoreboard</a></h3></li></ul></div></footer></body></html>

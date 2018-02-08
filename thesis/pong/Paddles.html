@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>tAS: Pong</title><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script></head><body><link rel="stylesheet" type="text/css" media="all" href="../assets/css/main.css"><div id="header" class="-2u"><div class="10u"><h1>Paddles</h1>
+<!DOCTYPE html><html><head><title>tAS: Pong</title><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script></head><body><link rel="stylesheet" type="text/css" media="all" href="../assets/sass/main.css"><div id="header" class="-2u"><div class="10u"><h1>Paddles</h1>
 
 <p>Let&#39;s start by listing out the things we&#39;ll need the Paddles to do.</p>
 
@@ -45,39 +45,11 @@
     rect(this.position.x, this.position.y,
         this.width, this.height);
   };
-}</code></pre><p>Now we&#39;re ready to add the paddles to our sketch.</p><pre><code>var player1;
-var player2;
- 
-function setup()
-{
-  player1 = new Paddle(1);
-  player2 = new Paddle(2);
-}
- 
-function draw()
-{
-  background(0);
-  player1.draw();
-  player2.draw();
-}</code></pre><h3>Input</h3>
+}</code></pre><p>Now we&#39;re ready to add the paddles to our sketch.</p><iframe width="100%" height="800" scrolling="no" frameborder="no" src="paddle_sketches/4-paddle.html"></iframe><h3>Input</h3>
 
 <p>Great! Now that we have our paddles in the game, let&#39;s work on adding input for the paddles. There are <em>lots</em> of ways that we could add input! We could try to plug in a game pad, hook up some physical computing bits and plug it in through a Serial connection, or even have your inputs communicate over OSC. For now though, lets just stick to using the keyboard.</p>
 
-<p>In p5, we&#39;re already given a <a href="https://p5js.org/reference/#/p5/keyIsDown"><code>keyIsDown()</code></a> function to handle keyboard input. Let&#39;s see if we can change the background color while the <code>W</code> key is being pressed.</p><pre><code>...
- 
-function setup()
-{
-  ...
-}
- 
-function draw()
-{
-  ...
-  if(keyIsDown(87))
-  {
-    background(255, 0, 0);
-  }
-}</code></pre><p>Notice how we passed in <code>87</code> as our argument for <code>keyIsDown()</code>. That&#39;s because <code>keyIsDown</code> takes the keyCode values of whatever key is pressed. Personally, I usually need to look up what key matches with what values, so <a href="http://keycode.info/">this site</a> is always a useful reference. (The value <code>87</code> as a key value is mapped to the <code>w</code> key, by the way)</p>
+<p>In p5, we&#39;re already given a <a href="https://p5js.org/reference/#/p5/keyIsDown"><code>keyIsDown()</code></a> function to handle keyboard input. Let&#39;s see if we can change the background color while the <code>W</code> key is being pressed.</p><iframe width="100%" height="800" scrolling="no" frameborder="no" src="paddle_sketches/5-paddle.html"></iframe><p>Notice how we passed in <code>87</code> as our argument for <code>keyIsDown()</code>. That&#39;s because <code>keyIsDown</code> takes the keyCode values of whatever key is pressed. Personally, I usually need to look up what key matches with what values, so <a href="http://keycode.info/">this site</a> is always a useful reference. (The value <code>87</code> as a key value is mapped to the <code>w</code> key, by the way)</p>
 
 <h3>Move</h3>
 
@@ -90,7 +62,7 @@ function draw()
     {
       this.y -= 5;
     }
-    if(keyIsDown(87))
+    if(keyIsDown(83))
     {
       this.y += 5;
     }
@@ -112,7 +84,7 @@ function draw()
   player1.draw();
   player2.move();
   player2.draw();
-}</code></pre><p>Great! Well, sorta. While we did get the paddle class to receive inputs, pressing the <code>w</code> and <code>s</code> keys moves both of the paddles. How might we go about fixing this?</p>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="paddle_sketches/7-paddle.html"></iframe><p>Great! Well, sorta. While we did get the paddle class to receive inputs, pressing the <code>w</code> and <code>s</code> keys moves both of the paddles. How might we go about fixing this?</p>
 
 <p>Well, one solution might be to use the <code>side</code> value that we passed into the constructor earlier.</p>
 
@@ -145,7 +117,7 @@ function draw()
     }
   };
   ...
-}</code></pre><p>Having all those nested <code>if</code> statements might not be the most elegant way to handle the inputs, but it&#39;ll be okay for now. (By the way, the <code>keyIsDown(38)</code> and <code>keyIsDown(40)</code> refers to the up and down keys on the keyboard).</p>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="paddle_sketches/8-paddle.html"></iframe><p>Having all those nested <code>if</code> statements might not be the most elegant way to handle the inputs, but it&#39;ll be okay for now. (By the way, the <code>keyIsDown(38)</code> and <code>keyIsDown(40)</code> refers to the up and down keys on the keyboard).</p>
 
 <h3>Don&#39;t Leave the Screen</h3>
 
@@ -190,6 +162,6 @@ function draw()
     }
   };
   ...
-}</code></pre><h3>Exercise: Elegant Movements</h3>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="paddle_sketches/9-paddle.html"></iframe><h3>Exercise: Elegant Movements</h3>
 
-<p>You might have noticed that the <code>this.move()</code> function is getting pretty crowded with <code>if</code> statements. How might you re-write this function so that it can be more readable to someone else?</p></div></div></body></html>
+<p>You might have noticed that the <code>this.move()</code> function is getting pretty crowded with <code>if</code> statements. How might you re-write this function so that it can be more readable to someone else?</p></div></div><footer id="footer"><div class="inner"><ul class="copyright"><li class="nav-link"><h3> <a href="index.html">Back</a></h3></li><li class="nav-link"><h3><a href="ball.html">Ball</a></h3></li><li class="nav-link"><h3><a href="scoreboard.html">Scoreboard</a></h3></li></ul></div></footer></body></html>
