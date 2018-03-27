@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><title>The Algorithmic Sketchbook</title><script src="/assets/js/jquery.min.js"></script><script src="/assets/js/p5.min.js"></script><script src="/assets/js/p5.dom.min.js"></script><link rel="stylesheet" href="../../assets/sass/main.css"></head><body><div id="wrapper"><div class="inside"><div id="head"><div class="section"><h1> </h1><h1> </h1></div></div><div id="main"><div class="10u"><div class="-2u"><div class="section"><h1>Integrating the Timeline</h1>
+
+<h3>Integrating <code>.deltaTime()</code></h3>
+
+<p>Now let&#39;s add a Timeline object to the animation and replace the <code>frameCount()</code> logic with <code>deltaTime()</code>. </p>
+
+<pre><code>let t;
+let theta = 0;
+const maxFrameCount = 200;
+//make a variable for time
+let mTime;
+
+function setup() {
+frameRate(30)
+createCanvas(500, 500)
+noStroke()
+mTime = new Timeline()
+}
+
+function draw() {
+
+//update this.now and this.before
+mTime.update()
+
+background(51)
+
+//change theta from frame-dependent to frame-independent
+//theta = frameCount/50;
+theta += mTime.deltaTime();
+
+...//draw the animation
+}</code></pre>
+
+<h3>But now the animation is way too fast!</h3>
+
+<p>Oh no! Now the animation is going much faster than it was before. This is because when <code>framecount()/50</code> was being used, <code>theta</code> was increasing by about 0.02 each frame. now that <code>deltaTime</code> is being used, it&#39;s increasing by about 32 (at 30 FPS) each frame. That&#39;s because 32 milliseconds have elapsed since the last frame. </p>
+
+<h3>Returning seconds instead of milliseconds</h3></div></div></div></div><footer id="footer"><div class="inner"><ul class="copyright"><li class="nav-link"><h3> <a href="./timeline">Back</a></h3></li><li class="nav-link"><h3><a href="../../index">Finish</a></h3></li></ul></div></footer></div></div></body></html>
