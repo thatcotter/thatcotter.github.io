@@ -15,37 +15,24 @@
     {
         this.translation = createVector(target.x,0)
     }
-...
-}</code></pre>
-
-<h2>Passing in the player position</h2>
+    ...
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="sketches/1-follow.html"></iframe><h2>Passing in the player position</h2>
 
 <p>Now lets see how that looks when we bring the update function into the draw loop. In the draw loop, you&#39;ll need to call <code>cam.update()</code> and pass in the position of the player object&#39;s position (<code>player.body.position</code>)</p>
 
 <pre><code>...
-
-let cam;
-
-function setup() 
-{
-...
-}
-
 function draw() 
 {
-background(51);
-Engine.update(engine)
-player.update()
+    background(51);
+    Engine.update(engine)
+    player.update()
 
-cam.update(player.body.position)
-cam.begin()
-
-...
-
-cam.end()
-}</code></pre>
-
-<h2>Why <code>.body</code>?</h2>
+    cam.update(player.body.position)
+    cam.begin()
+    ...
+    cam.end()
+}
+...</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="sketches/2-follow.html"></iframe><h2>Why <code>.body</code>?</h2>
 
 <p>Because the player object is a matter.js object, it has a <a href="http://brm.io/matter-js/docs/classes/Body.html"><code>.body</code> property</a> that contains all of the physics information that the rest of matter.js needs to run the </p>
 
@@ -65,9 +52,7 @@ cam.end()
         this.translation = createVector(-target.x,0)
     }
 ...
-}</code></pre>
-
-<h2>Hmm, still not quite right 🤔</h2>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="sketches/3-follow.html"></iframe><h2>Hmm, still not quite right 🤔</h2>
 
 <p>Looks like the player ends up right at the edge of the canvas now. To fix this, let&#39;s add an offset to the translation so the player is in the center. Adding half of the width to the translation should be enough.</p>
 
@@ -79,6 +64,4 @@ cam.end()
         this.translation = createVector(-target.x+width/2,0)
     }
 ...
-}</code></pre>
-
-<p>Great! Now the camera works! The rest of the level could use a bit more designing and fleshing out, but your friend acn take care of that. </p></div></div></div></div><footer id="footer"><div class="inner"><ul class="copyright"><li class="nav-link"><h3> <a href="./make-camera">Back                </a></h3></li><li class="nav-link"><h3><a href="../../index">Finish</a></h3></li></ul></div></footer></div></div></body></html>
+}</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="sketches/4-follow.html"></iframe><p>Great! Now the camera works! The rest of the level could use a bit more designing and fleshing out, but we can leave that to your friend&#39;s creative discretion.</p></div></div></div></div><footer id="footer"><div class="inner"><ul class="copyright"><li class="nav-link"><h3> <a href="./make-camera">Back                </a></h3></li><li class="nav-link"><h3><a href="../../index">Finish</a></h3></li></ul></div></footer></div></div></body></html>

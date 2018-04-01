@@ -10,26 +10,27 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="codemirror/lib/codemirror.css">
-        <link rel="stylesheet" href="codemirror/addon/fold/foldgutter.css">
-        <link rel="stylesheet" href="codemirror/addon/dialog/dialog.css">
-        <link rel="stylesheet" href="codemirror/theme/solarized.css">
-        <link rel="stylesheet" href="codemirror/theme/monokai.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../../../codemirror/lib/codemirror.css">
+        <link rel="stylesheet" href="../../../codemirror/addon/fold/foldgutter.css">
+        <link rel="stylesheet" href="../../../codemirror/addon/dialog/dialog.css">
+        <!-- <link rel="stylesheet" href="../../../codemirror/theme/solarized.css">
+        <link rel="stylesheet" href="../../../codemirror/theme/monokai.css"> -->
+        <link rel="stylesheet" href="../../../codemirror/theme/fairyfloss.css">
+        <link rel="stylesheet" href="../../../style.css">
 
-        <script type="text/javascript" language="javascript" src="codemirror/lib/codemirror.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/search/searchcursor.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/search/search.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/dialog/dialog.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/edit/matchbrackets.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/edit/closebrackets.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/comment/comment.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/wrap/hardwrap.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/fold/foldcode.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/addon/fold/brace-fold.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/mode/javascript/javascript.js"></script>
-        <script type="text/javascript" language="javascript" src="codemirror/keymap/sublime.js"></script>
-        <script type="text/javascript" language="javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/lib/codemirror.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/search/searchcursor.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/search/search.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/dialog/dialog.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/edit/matchbrackets.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/edit/closebrackets.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/comment/comment.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/wrap/hardwrap.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/fold/foldcode.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/fold/brace-fold.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/mode/javascript/javascript.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/keymap/sublime.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../pong/js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" language="javascript">
 
             var sketchEditor = null,
@@ -66,11 +67,10 @@
                 });
 
                 sketchEditor.setSize(windowWidth/2, windowHeight);
-                // sketchEditor.setOption("theme", "solarized dark");
-                sketchEditor.setOption("theme", "monokai");
+                sketchEditor.setOption("theme", "fairyfloss");
 
                 sketchEditor.on("change", function(cm, change) {
-                    console.log("changed")
+                    // console.log("changed")
 
                     if (iframeSketch) {
                       iframeSketch.get(0).contentDocument.location.reload(true);
@@ -134,7 +134,7 @@
 
             function createiFrame(){
 
-              var iframe = $('<iframe id="iframe-sketch" src="code.html">');
+              var iframe = $('<iframe id="iframe-sketch" src="../../../codemirror/code.html">');
               iframe.width("100%");
               iframe.height("100%");
 
@@ -157,50 +157,65 @@
         <div id="panel-container">
             <div id="left-panel">
                 <textarea id="code" name="code">
+let Engine = Matter.Engine,
+    Render = Matter.Render,
+    World = Matter.World,
+    Body = Matter.Body;
+    Bodies = Matter.Bodies;
 
-var xspacing = 16;    // Distance between each horizontal location
-var w;                // Width of entire wave
-var theta = 0.0;      // Start angle at 0
-var amplitude = 75.0; // Height of wave
-var period = 500.0;   // How many pixels before the wave repeats
-var dx;               // Value for incrementing x
-var yvalues;  // Using an array to store height values for the wave
+let engine;
+let world;
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  w = width+16;
-  dx = (TWO_PI / period) * xspacing;
-  yvalues = new Array(floor(w/xspacing));
+let player;
+let ground;
+let block;
+
+function setup() 
+{
+    createCanvas(windowWidth,windowHeight)
+
+    engine = Engine.create()
+    world = engine.world
+
+    player = new Player(100,height-200,35,35)
+    player.init(world)
+
+    let options = 
+    {
+        isStatic: true
+    }
+    ground = Bodies.rectangle(-100, height,
+                              width*3, 100,
+                              options)
+    Bodies.rectangle()
+    block = Bodies.rectangle(width * 0.3, height-50,
+                             width*0.5, 100, 
+                             options)
+
+    World.add(world, [ground, block])
 }
 
-function draw() {
-  background(0);
-  calcWave();
-  renderWave();
+function draw() 
+{
+    Engine.update(engine)
+
+    background(105,0,64)
+
+    player.update()
+    player.display()
+    fill(210,0,128)
+    noStroke()
+
+    rectMode(CENTER)
+
+    rect(ground.position.x, ground.position.y, 
+        ground.vertices[1].x - ground.vertices[0].x,
+        ground.vertices[2].y - ground.vertices[0].y)
+
+    rect(block.position.x, block.position.y,
+        block.vertices[1].x - block.vertices[0].x,
+        block.vertices[2].y - block.vertices[0].y)
 }
-
-function calcWave() {
-  // Increment theta (try different values for 
-  // 'angular velocity' here)
-  theta += 0.02;
-
-  // For every x value, calculate a y value with sine function
-  var x = theta;
-  for (var i = 0; i < yvalues.length; i++) {
-    yvalues[i] = sin(x)*amplitude;
-    x+=dx;
-  }
-}
-
-function renderWave() {
-  noStroke();
-  fill(255);
-  // A simple way to draw the wave with an ellipse at each location
-  for (var x = 0; x < yvalues.length; x++) {
-    ellipse(x*xspacing, height/2+yvalues[x], 16, 16);
-  }
-}
-
 
                 </textarea>
             </div>
