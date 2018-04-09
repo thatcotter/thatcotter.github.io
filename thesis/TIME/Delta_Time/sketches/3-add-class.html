@@ -10,27 +10,27 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="../../codemirror/lib/codemirror.css">
-        <link rel="stylesheet" href="../../codemirror/addon/fold/foldgutter.css">
-        <link rel="stylesheet" href="../../codemirror/addon/dialog/dialog.css">
-        <link rel="stylesheet" href="../../codemirror/theme/solarized.css">
-        <link rel="stylesheet" href="../../codemirror/theme/monokai.css">
-        <link rel="stylesheet" href="../../codemirror/theme/fairyfloss.css">
-        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../../codemirror/lib/codemirror.css">
+        <link rel="stylesheet" href="../../../codemirror/addon/fold/foldgutter.css">
+        <link rel="stylesheet" href="../../../codemirror/addon/dialog/dialog.css">
+        <!-- <link rel="stylesheet" href="../../../codemirror/theme/solarized.css">
+        <link rel="stylesheet" href="../../../codemirror/theme/monokai.css"> -->
+        <link rel="stylesheet" href="../../../codemirror/theme/fairyfloss.css">
+        <link rel="stylesheet" href="../../../style.css">
 
-        <script type="text/javascript" language="javascript" src="../../codemirror/lib/codemirror.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/search/searchcursor.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/search/search.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/dialog/dialog.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/edit/matchbrackets.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/edit/closebrackets.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/comment/comment.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/wrap/hardwrap.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/fold/foldcode.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/addon/fold/brace-fold.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/mode/javascript/javascript.js"></script>
-        <script type="text/javascript" language="javascript" src="../../codemirror/keymap/sublime.js"></script>
-        <script type="text/javascript" language="javascript" src="../../pong/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/lib/codemirror.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/search/searchcursor.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/search/search.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/dialog/dialog.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/edit/matchbrackets.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/edit/closebrackets.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/comment/comment.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/wrap/hardwrap.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/fold/foldcode.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/addon/fold/brace-fold.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/mode/javascript/javascript.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../codemirror/keymap/sublime.js"></script>
+        <script type="text/javascript" language="javascript" src="../../../pong/js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" language="javascript">
 
             var sketchEditor = null,
@@ -67,7 +67,6 @@
                 });
 
                 sketchEditor.setSize(windowWidth/2, windowHeight);
-                // sketchEditor.setOption("theme", "solarized dark");
                 sketchEditor.setOption("theme", "fairyfloss");
 
                 sketchEditor.on("change", function(cm, change) {
@@ -135,7 +134,7 @@
 
             function createiFrame(){
 
-              var iframe = $('<iframe id="iframe-sketch" src="../../codemirror/code.html">');
+              var iframe = $('<iframe id="iframe-sketch" src="../../../codemirror/code.html">');
               iframe.width("100%");
               iframe.height("100%");
 
@@ -158,46 +157,74 @@
         <div id="panel-container">
             <div id="left-panel">
                 <textarea id="code" name="code">
+let mTime
+let t = 0
 
-var player1;
-var player2;
-    
-function setup()
+function setup() 
 {
-    createCanvas(windowWidth, windowHeight);
-    player1 = new Paddle(1);
-    player2 = new Paddle(2);
-}
-    
-function draw()
-{
-    background(0);
-    player1.draw();
-    player2.draw();
+    createCanvas(windowWidth, windowHeight)
+    frameRate(30)
+    mTime = new Timeline()
 }
 
-function Paddle(side)
+function draw() 
 {
-    if(side === 1)
-    {
-        this.position = createVector( 25 , height/2);
-    }
-    if(side === 2)
-    {
-        this.position = createVector( width-25, height/2);
-    }
-    this.width = 20;
+    background(245)
+    mTime.update()
+    t += mTime.deltaTime()
+    translate(width*0.125, height*0.25)
+    wave(width*0.75, t, height*0.25, color(245, 0, 128), 0)
+    translate(0, height*0.5)
+    scale(1, -1)
+    wave(width*0.75, t, height*0.25, color(128, 0, 128), 1)
+}
 
-    this.height = height/5;
-
-    this.draw = function()
+const wave = (w, theta, amp, c, mode) =>
+{
+    noStroke()
+    fill(c)
+    segments = w / 25
+    for( i = 0; i < segments; i++)
     {
-    fill(255);
-    noStroke();
-    rectMode(CENTER);
-    rect(this.position.x, this.position.y,
-        this.width, this.height);
-    };
+    let magnitude = 0
+    if(mode === 0){
+        magnitude = (sin((t*0.025)+i*0.2)+1)* 0.5 * amp + 15
+    } 
+    else {
+        magnitude = (cos((t*0.025)+i*0.2)+1)* 0.5 * amp + 15
+    }
+    hp = createVector(i * 25, magnitude)
+    tp = createVector(i * 25, 0)
+    diamond(hp,tp,8*(magnitude/amp))
+    }
+}
+
+const diamond = (headPos, tailPos, w) =>
+{
+    beginShape()
+    vertex(headPos.x-w, lerp(headPos.y, tailPos.y, 0.1))
+    vertex(headPos.x, headPos.y)
+    vertex(headPos.x+w, lerp(headPos.y, tailPos.y, 0.1))
+    vertex(tailPos.x, tailPos.y)
+    endShape(CLOSE)
+}
+
+class Timeline
+{
+    constructor()
+    {
+        this.now = Date.now()
+        this.then
+    }
+    update()
+    {
+        this.then = this.now
+        this.now = Date.now()
+    }
+    deltaTime()
+    {
+        return (this.now - this.then)
+    }
 }
 
                 </textarea>

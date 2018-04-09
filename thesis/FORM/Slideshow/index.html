@@ -1,4 +1,8 @@
-<!DOCTYPE html><html><head><title>Grokking Creative Code</title><script src="/assets/js/jquery.min.js"></script><script src="/assets/js/p5.min.js"></script><script src="/assets/js/p5.dom.min.js"></script><link rel="stylesheet" href="../../assets/sass/main.css"></head><body><div id="wrapper"><div class="inside"><div id="head"><div class="section"><h1> </h1><h1> </h1></div></div><div id="main"><div class="10u"><div class="-2u"><div class="section"><h1>Slideshow</h1>
+<!DOCTYPE html><html><head><title>Grokking Creative Code</title><script src="/assets/js/jquery.min.js"></script><script src="/assets/js/p5.min.js"></script><script src="/assets/js/p5.dom.min.js"></script><script>window.addEventListener('keydown', function(e) {
+  if(e.keyCode == 32 && e.target == document.body) {
+    e.preventDefault();
+  }
+}); </script><link rel="stylesheet" href="../../assets/sass/main.css"></head><body><div id="wrapper"><div class="inside"><div id="head"><div class="section"><h1> </h1><h1> </h1></div></div><div id="main"><div class="10u"><div class="-2u"><div class="section"><h1>Slideshow</h1>
 
 <h3>Showing off your work</h3>
 
@@ -32,8 +36,6 @@ example 2
 
 ```
 example 3
-```</code></pre>
-
-<h3>What we need</h3>
+```</code></pre><iframe width="100%" height="800" scrolling="no" frameborder="no" src="sketches/1-example1.html"></iframe><iframe width="100%" height="800" scrolling="no" frameborder="no" src="sketches/1-example2.html"></iframe><iframe width="100%" height="800" scrolling="no" frameborder="no" src="sketches/1-example3.html"></iframe><h3>What we need</h3>
 
 <ul><li>Slides that can encapsulate the behavior of each or your sketches that you want to present</li><li>One type of slide that is static (text/image)</li><li>Another type of slide that is animated (p5 sketches)</li><li>A container for all of your slides</li><li>Something that keeps track of where you are in the slideshow</li><li>Holds a variable for your place in the slideshow</li><li>A way to change which slide is being shown</li></ul></div></div></div></div><footer id="footer"><div class="inner"><ul class="copyright"><li class="nav-link"><h3> <a href="../../index">Back</a></h3></li><li class="nav-link"><h3><a href="./slide-class">Next</a></h3></li></ul></div></footer></div></div></body></html>

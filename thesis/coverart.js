@@ -76,3 +76,8 @@ const drawflowfield = (res) =>
         }
     }
 }
+
+// function keyPressed() 
+// {
+//     return false; // prevent any default behaviour
+// }

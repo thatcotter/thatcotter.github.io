@@ -1,4 +1,8 @@
-<!DOCTYPE html><html><head><title>Grokking Creative Code</title><script src="/assets/js/jquery.min.js"></script><script src="/assets/js/p5.min.js"></script><script src="/assets/js/p5.dom.min.js"></script><link rel="stylesheet" href="../../assets/sass/main.css"></head><body><div id="wrapper"><div class="inside"><div id="head"><div class="section"><h1> </h1><h1> </h1></div></div><div id="main"><div class="10u"><div class="-2u"><div class="section"><h1>Moving the Origin</h1>
+<!DOCTYPE html><html><head><title>Grokking Creative Code</title><script src="/assets/js/jquery.min.js"></script><script src="/assets/js/p5.min.js"></script><script src="/assets/js/p5.dom.min.js"></script><script>window.addEventListener('keydown', function(e) {
+  if(e.keyCode == 32 && e.target == document.body) {
+    e.preventDefault();
+  }
+}); </script><link rel="stylesheet" href="../../assets/sass/main.css"></head><body><div id="wrapper"><div class="inside"><div id="head"><div class="section"><h1> </h1><h1> </h1></div></div><div id="main"><div class="10u"><div class="-2u"><div class="section"><h1>Moving the Origin</h1>
 
 <p>Fortunately, if we want to change where the origin is on the canvas, we have a few functions built in to p5 that let us do just that. For making a 2D Camera that pans left and right, we can make good use of the <code>translate()</code> function.</p>
 
