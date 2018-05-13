@@ -63,7 +63,7 @@ function windowResized()
 const drawflowfield = (res) =>
 {
     let r = floor(width/res)
-    let t = frameCount*0.0051
+    let t = frameCount*0.005
     for(let i = 0; i < width/r+1; i++)
     {
         for(let j = 0; j < height/r+1; j++)
