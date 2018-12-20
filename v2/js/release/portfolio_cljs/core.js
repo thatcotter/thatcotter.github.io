@@ -18,25 +18,25 @@ return cljs.core.print.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.c
 })], null),page_name], null)], null);
 });
 portfolio_cljs.core.home_page = (function portfolio_cljs$core$home_page(){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$section$section,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$title$name,"andrew cotter"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2$subtitle$name,"computational art + design"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$tabs$is_DASH_small,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ul,(function (){var iter__4324__auto__ = (function portfolio_cljs$core$home_page_$_iter__24081(s__24082){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$section$section,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h1$title$name,"andrew cotter"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2$subtitle$name,"computational art + design"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$tabs$is_DASH_small,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ul,(function (){var iter__4324__auto__ = (function portfolio_cljs$core$home_page_$_iter__24079(s__24080){
 return (new cljs.core.LazySeq(null,(function (){
-var s__24082__$1 = s__24082;
+var s__24080__$1 = s__24080;
 while(true){
-var temp__5457__auto__ = cljs.core.seq(s__24082__$1);
+var temp__5457__auto__ = cljs.core.seq(s__24080__$1);
 if(temp__5457__auto__){
-var s__24082__$2 = temp__5457__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__24082__$2)){
-var c__4322__auto__ = cljs.core.chunk_first(s__24082__$2);
+var s__24080__$2 = temp__5457__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__24080__$2)){
+var c__4322__auto__ = cljs.core.chunk_first(s__24080__$2);
 var size__4323__auto__ = cljs.core.count(c__4322__auto__);
-var b__24084 = cljs.core.chunk_buffer(size__4323__auto__);
-if((function (){var i__24083 = (0);
+var b__24082 = cljs.core.chunk_buffer(size__4323__auto__);
+if((function (){var i__24081 = (0);
 while(true){
-if((i__24083 < size__4323__auto__)){
-var page = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4322__auto__,i__24083);
-cljs.core.chunk_append(b__24084,portfolio_cljs.core.page_link(page));
+if((i__24081 < size__4323__auto__)){
+var page = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4322__auto__,i__24081);
+cljs.core.chunk_append(b__24082,portfolio_cljs.core.page_link(page));
 
-var G__24088 = (i__24083 + (1));
-i__24083 = G__24088;
+var G__24086 = (i__24081 + (1));
+i__24081 = G__24086;
 continue;
 } else {
 return true;
@@ -44,13 +44,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__24084),portfolio_cljs$core$home_page_$_iter__24081(cljs.core.chunk_rest(s__24082__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__24082),portfolio_cljs$core$home_page_$_iter__24079(cljs.core.chunk_rest(s__24080__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__24084),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__24082),null);
 }
 } else {
-var page = cljs.core.first(s__24082__$2);
-return cljs.core.cons(portfolio_cljs.core.page_link(page),portfolio_cljs$core$home_page_$_iter__24081(cljs.core.rest(s__24082__$2)));
+var page = cljs.core.first(s__24080__$2);
+return cljs.core.cons(portfolio_cljs.core.page_link(page),portfolio_cljs$core$home_page_$_iter__24079(cljs.core.rest(s__24080__$2)));
 }
 } else {
 return null;
@@ -66,12 +66,12 @@ return cljs.core.print.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.c
 return cljs.core.print.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["test"], 0));
 }),cljs.core.cst$kw$href,"https://twitter.com/ThatCotter",cljs.core.cst$kw$target,"blank"], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$i$fab$fa_DASH_twitter], null)," "], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$li,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$on_DASH_click,(function (){
 return cljs.core.print.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["test"], 0));
-}),cljs.core.cst$kw$href,"https://www.instagram.com/thatcotter/",cljs.core.cst$kw$target,"blank"], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$i$fab$fa_DASH_instagram], null)," "], null)], null)], null)], null),(function (){var state = (function (){var G__24086 = cljs.core.cst$kw$page;
-var fexpr__24085 = cljs.core.deref(portfolio_cljs.core.model);
-return (fexpr__24085.cljs$core$IFn$_invoke$arity$1 ? fexpr__24085.cljs$core$IFn$_invoke$arity$1(G__24086) : fexpr__24085.call(null,G__24086));
+}),cljs.core.cst$kw$href,"https://www.instagram.com/thatcotter/",cljs.core.cst$kw$target,"blank"], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$i$fab$fa_DASH_instagram], null)," "], null)], null)], null)], null),(function (){var state = (function (){var G__24084 = cljs.core.cst$kw$page;
+var fexpr__24083 = cljs.core.deref(portfolio_cljs.core.model);
+return (fexpr__24083.cljs$core$IFn$_invoke$arity$1 ? fexpr__24083.cljs$core$IFn$_invoke$arity$1(G__24084) : fexpr__24083.call(null,G__24084));
 })();
-var G__24087 = state;
-switch (G__24087) {
+var G__24085 = state;
+switch (G__24085) {
 case "Home":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [portfolio_cljs.project_grid.cell_grid,portfolio_cljs.core.model], null);
 
