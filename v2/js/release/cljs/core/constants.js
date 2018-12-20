@@ -160,6 +160,7 @@ cljs.core.cst$kw$section$section = new cljs.core.Keyword(null,"section.section",
 cljs.core.cst$sym$edit = new cljs.core.Symbol(null,"edit","edit",-1302639,null);
 cljs.core.cst$kw$_LT__GT_ = new cljs.core.Keyword(null,"<>","<>",1280186386);
 cljs.core.cst$sym$editable_QMARK_ = new cljs.core.Symbol(null,"editable?","editable?",-164945806,null);
+cljs.core.cst$kw$scrolling = new cljs.core.Keyword(null,"scrolling","scrolling",349011090);
 cljs.core.cst$sym$base_DASH_count = new cljs.core.Symbol(null,"base-count","base-count",-1180647182,null);
 cljs.core.cst$kw$no_DASH_cache = new cljs.core.Keyword(null,"no-cache","no-cache",1588056370);
 cljs.core.cst$kw$render = new cljs.core.Keyword(null,"render","render",-1408033454);

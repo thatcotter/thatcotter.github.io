@@ -1,1 +1,0 @@
-{"version":3,"file":"\/Users\/andrewcotter\/Documents\/GitHub\/portfolio-cljs\/public\/js\/out\/devtools\/version.js","sources":["version.cljs?rel=1545318896378"],"lineCount":9,"mappings":";AAAA;;AAGA,AAAKA,mCAAgB;AAErB,uCAAA,vCAAMC;AAAN,AACED","names":["devtools.version\/current-version","devtools.version\/get-current-version"]}
