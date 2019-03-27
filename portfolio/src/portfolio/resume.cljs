@@ -13,17 +13,18 @@
 (defn collumn [] "")
 
 (defn body []
-    [:div
+    [:div.columns.is-centered
+      [:div.column.is-two-thirds-desktop.is-full-tablet
         [:section.section
             [:a.subtitle.has-text-link {:href "./assets/images/acotter_resume.pdf"} "Print/PDF"]]
-        [:section.section
+        [:section.section.
             [:div.tile.is-ancestor
                 [:div.tile.is-vertical.is-7
                     [:article.tile.is-parent.is-vertical
                         [:h1.title.is-child "Professional Experience"]
                         [:article.tile.is-child.box
                             [:p.title.is-5 "Local Projects, Creative Technologist"]
-                            [:p.subtitle "Spring 2018 - Present"]
+                            [:p.subtitle "Spring 2018 - Winter 2019"]
                             [:p.is-size-6.has-text-weight-light "Worked on various interactive installations in a
                             developer role, using platforms such as Electron with
                             WebGL, Arduino, and Swift/iOS."]]
@@ -129,4 +130,4 @@
                                 [:p.is-size-6.has-text-weight-light "President of Literary Society 2012-2014"]]]
                         [:div.tile.is-vertical.content.box
                             [:p.title.is-5 "Attained the rank of Eagle Scout"]
-                            [:p.subtitle.is-5 "BSA Toop 139, 2010"]]]]]])
+                            [:p.subtitle.is-5 "BSA Toop 139, 2010"]]]]]]])
