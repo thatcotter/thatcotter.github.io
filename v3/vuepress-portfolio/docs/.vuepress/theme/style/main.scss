@@ -10,3 +10,12 @@
     padding-top: 2.5px;
     padding-bottom: 2.5px;
 }
+
+.tileImage {
+    flex: 0;
+    height: 100%;
+    width: 100%;
+    layout: fill;
+    opacity: 0.66;
+    object-fit: cover;
+}

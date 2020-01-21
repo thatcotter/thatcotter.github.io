@@ -12,7 +12,8 @@
 
                         <article class="tile is-parent is-vertical">
                             <p class="title is-child">
-                                <Content slot-key="work"/>
+                                <!-- <Content slot-key="work"/> -->
+                                Professional Experience
                             </p>
                             <article class="tile is-child box" v-for="work in allWork" >
                                 <p class="title is-5">{{work.frontmatter.Title}}</p>
@@ -35,14 +36,18 @@
 
                     <div class="tile is-parent is-vertical">
 
-                        <p class="title"><Content slot-key="core"/></p>
+                        <p class="title">
+                            <!-- <Content slot-key="core"/> -->
+                            Core Competencies
+                        </p>
                         <article class="content box" v-for="core in allCore" >
                             <p class="title is-5">{{core.frontmatter.Title}}</p>
                             <p class="is-size-6 has-text-weight-light is-7">{{core.frontmatter.Description}}</p>
                         </article>
 
                         <p class="title">
-                            <Content slot-key="skills"/>
+                            <!-- <Content slot-key="skills"/> -->
+                            Skills + Tools
                         </p>
                         <div class="tile is-vertical box">
                             <p class="title is-5">Adept</p>
@@ -81,9 +86,11 @@
                                 <li>Compiler / Interpreter Design</li>
                             </ul>
                         </div>
-                        <!-- TODO: Skills lists -->
 
-                        <p class="title"><Content slot-key="education"/></p>
+                        <p class="title">
+                            <!-- <Content slot-key="education"/> -->
+                            Education + Honors
+                        </p>
                         <article class="content box" v-for="edu in allEdu">
                             <p class="title is-5">{{edu.frontmatter.Title}}</p>
                             <p class="subtitle">{{edu.frontmatter.Subtitle}}</p>
