@@ -24,8 +24,7 @@
 
                         <article class="tile is-parent is-vertical">
                             <p class="title is-child">
-                                <!-- <Content slot-key="teaching"/> -->
-                                Teaching Experience
+                                <Content slot-key="teaching"/>
                             </p>
                             <article class="content box" v-for="teach in allTeaching" >
                                 <p class="title is-5">{{teach.frontmatter.Title}}</p>
@@ -109,6 +108,9 @@
 <script lang="ts">
 
 export default {
+    components: {
+        // ResumeCard
+    },
     computed: {
         allWork() {
             let arr = this.$site.pages
