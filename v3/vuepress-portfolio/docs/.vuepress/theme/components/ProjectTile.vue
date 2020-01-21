@@ -2,12 +2,7 @@
     <div class="column is-one-third progressive" style="justify-content: center; overflow: hidden; align-items: center">
         <a :href="path">
             <img class="preview lazy" :src="heroSource"        alt=""
-                 style="flex: 0;
-                        height: 100%;
-                        width: 100%;
-                        layout: fill;
-                        opacity: 0.66;
-                        object-fit: cover;">
+                 style="flex: 0;height: 100%;width: 100%;layout: fill;opacity: 0.66;object-fit: cover;">
         </a>
     </div>
 </template>
