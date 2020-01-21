@@ -42,7 +42,7 @@ The project did not fully take advantage of the future possibilities of 5G but i
 
 **In collaboration with:** 
 - Anezka Sebek & Tammy Walters (Principal Investigators)
-- Jeffrey Bennett (Unity Programmer
+- Jeffrey Bennett (Unity Programmer)
 - Katherine Boehm (UX/UI Design, Unity Programmer, and Voice-Over)
 - Julie Byers (UX Graphic Design, Research Assistant)
 - Sam Levine (Lead Programmer, Unity Photon Engine)
