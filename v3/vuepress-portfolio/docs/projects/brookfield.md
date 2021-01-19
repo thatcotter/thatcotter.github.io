@@ -5,7 +5,7 @@ Hero: BWF_WishingTree_01_workthumb-1920.jpg
 ---
 
 ::: slot title
-Brookfiled Holiday
+Brookfield Holiday
 :::
 
 ::: slot hero

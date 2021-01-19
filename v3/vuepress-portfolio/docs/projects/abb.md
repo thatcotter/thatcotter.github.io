@@ -19,4 +19,4 @@ ABB ACE Center
 </section>
 :::
 
-While working as a Creative Technologist at [Local Projects](https://localprojects.com/work/ABB), our team worked closely with ABB’s global Customer Experience & Innovation team in Zurich towards a modular approach enabling a new generation of customer experience centers that rethink how space can augment collaboration and creativity. The first instance of the concept has a permanent home in ABB’s Corporate Research Center in Ladenburg, Germany, and also anchored ABB’s global customer conference in Houston. These initial installations are just the start of a multi-year effort by ABB’s Customer Experience team to establish similar centers around the world.
+While working as a Creative Technologist at [Local Projects](https://localprojects.com/work/ABB), the Planet Word team worked toward the goal of creating the world's first voice-activated museum. 
