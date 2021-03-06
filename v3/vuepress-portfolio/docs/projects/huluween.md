@@ -2,7 +2,7 @@
 Title: andrew cotter
 Subtitle: computational art + design
 Remote: https://medium.com/active-theory/huluween-the-screamlands-b1324f32ee7d
-Hero: pw.jpg
+Hero: huluween.gif
 ---
 
 ::: slot title
