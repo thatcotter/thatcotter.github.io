@@ -6,7 +6,11 @@ Hero: pw.jpg
 ---
 
 ::: slot title
-Huluween
+Huluween 2020
+:::
+
+::: slot subtitle
+A Virtual Haunted House Showcasing Hulu's Spookiest Content
 :::
 
 ::: slot hero
@@ -34,6 +38,6 @@ As one of Hulu’s largest brand tentpole campaigns, we were tasked with introdu
 <section class="hero">
 <div class="hero-content"
     margin="-50% 0 0 0" postion="relative">
-    <iframe title="vimeo-player" src="https://player.vimeo.com/video/510851234?app_id=122963&referrer=https%3A%2F%2Fmedium.com%2Factive-theory%2Fhuluween-the-screamlands-b1324f32ee7d" width="100%" height="800vh" frameborder="0" allowfullscreen></iframe>
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/510851234" width="100%" height="800vh" frameborder="0" allowfullscreen></iframe>
 </div>
 </section>

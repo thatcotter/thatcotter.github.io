@@ -9,6 +9,10 @@ Hero: pw.jpg
 Planet Word
 :::
 
+::: slot subtitle
+The World's First Voice-Activated Museum
+:::
+
 ::: slot hero
 
 <section class="hero">

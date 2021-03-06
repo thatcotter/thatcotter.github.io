@@ -23,31 +23,33 @@ Skills + Tools
 Education + Honors
 :::
 
-:: slot adept
+::: slot adept
+
 - Electron/Node.js
-- WebGL (Pixi.js, Three.js, ReGL, p5.js)
+- Unity (C#)
 - Arduino / Physical Computing
-- openFrameworks (C++)
+- WebGL (Pixi.js, Three.js)
 - Front End Web (HTML/SCSS/JS)
-- Adobe CC Workflow (esp. Ps, Ai, Id, Lr)
-:::
+  :::
 
 ::: slot intermediate
-- Unity / C#
+
+- Adobe CC Workflow (esp. Ps, Ai, Id, Lr)
+- Shaders (GLSL/HLSL)
+- openFrameworks/Cinder (C++)
+- Nannou (Rust)
 - Clojure(Script)/(CLR)
-- Fragment Shaders
-- Rust
-:::
+  :::
 
 ::: slot familiar
-- Python / Scikit
-- Jupyter Notebooks
-- Cinder (C++)
-- Vertex Shaders
-:::
+
+- Vue.js / React.js
+- Swift/iOS
+- Python / Scikit / Jupyter
+  :::
 
 ::: slot learning
-- Swift/iOS
+
 - Design Patterns
 - Compiler/Interpreter Design
-:::
+  :::

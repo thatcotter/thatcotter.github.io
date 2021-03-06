@@ -53,38 +53,42 @@
                         <div class="tile is-vertical box">
                             <p class="title is-5">Adept</p>
                             <ul is-6>
-                                <li>Electron/Node.js</li> 
+                                <Content slot-key="adept"/>
+                                <!-- <li>Electron/Node.js</li> 
+                                <li>Unity / C#</li>
                                 <li>Arduino / Physical Computing</li>
                                 <li>WebGL (Pixi.js, Three.js, ReGL, p5.js)</li>
-                                <li>Front End Web (HTML/SCSS/JS)</li>
-                                <li>Unity / C#</li>
+                                <li>Front End Web (HTML/SCSS/JS)</li> -->
                             </ul>
                         </div>
                         <div class="tile is-vertical box">
                             <p class="title is-5">Intermediate</p>
                             <ul is-6>
-                                <li>Adobe CC Workflow (esp. Ps, Ai, Id, Lr)</li>
+                                <Content slot-key="intermediate"/>
+                                <!-- <li>Adobe CC Workflow (esp. Ps, Ai, Id, Lr)</li>
+                                <li>Shaders (GLSL/HLSL)</li>
                                 <li>openFrameworks/Cinder (C++)</li>
                                 <li>Clojure(Script)/(CLR)</li>
-                                <li>Shaders (GLSL/HLSL)</li>
-                                <li>Rust</li>
+                                <li>Rust</li> -->
                             </ul>
                         </div>
                         <div class="tile is-vertical box">
                             <p class="title is-5">Familiar</p>
                             <ul is-6>
-                                <li>Python / Jupyter / Scikit</li> 
+                                <Content slot-key="familiar"/>
+                                <!-- <li>Python / Jupyter / Scikit</li> 
                                 <li>Swift / iOS</li>
                                 <li>React.js / Vue.js</li>
-                                <li></li>
+                                <li></li> -->
                             </ul>
                         </div>
                         <div class="tile is-vertical box">
                             <p class="title is-5">Actively Learning</p>
                             <ul is-6>
-                                <li>Keras / Tesorflow</li> 
+                                <Content slot-key="learning"/>
+                                <!-- <li></li> 
                                 <li>Design Patterns</li>
-                                <li>Compiler / Interpreter Design</li>
+                                <li>Compiler / Interpreter Design</li> -->
                             </ul>
                         </div>
 
@@ -127,6 +131,11 @@ export default {
                 .filter(page => page.path.includes('/cv/core/'))
                 .sort((a, b) => a.frontmatter.Order - b.frontmatter.Order)
             return arr
+        },
+        allSkills() {
+            let arr = this.$site.pages
+                .filter(page => page.path.includes('/cv/skills/'))
+            return arr[0]
         },
         allEdu() {
             let arr = this.$site.pages

@@ -6,7 +6,11 @@ Hero: abb.png
 ---
 
 ::: slot title
-ABB ACE Center
+ABB Customer Experience Center
+:::
+
+::: slot subtitle
+Helping ABB show potential clients how ABB is capturing the future
 :::
 
 ::: slot hero
