@@ -13,8 +13,8 @@ A Newtonian Physics-based Puzzle Game
 :::
 
 ::: slot hero
-<div class="hero-content"
-    padding="50% 0 0 0" postion="relative">
+
+<div class="hero-content" postion="relative">
     <!-- <video style="width:50% padding:50% 0 0 0" controls>
         <source src="../.vuepress/public/images/TheWishingForest.mp4" type="video/mp4">
         Your browser does not support the video tag.
