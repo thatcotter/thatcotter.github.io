@@ -15,7 +15,7 @@ Showcasing Indie Game Development in Philadelphia
 ::: slot hero
 
 <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body has-text-centered">
     <video style="width:50% padding:50% 0 0 0" controls muted>
         <source src="../.vuepress/public/images/phillytron.mp4" type="video/mp4">
         Your browser does not support the video tag.
