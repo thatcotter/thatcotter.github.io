@@ -22,8 +22,8 @@
     <p>Made with <a
         class="text-blue-500"
         target="_blank"
-        href="https://redpaperheart.com/work/thewishingforest"
-        >The Wishing Forest</a
+        href="https://openframeworks.cc/"
+        >openFrameworks</a
       ></p>
   </div>
 </template>

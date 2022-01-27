@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/magical-mecha", {data:[{}],fetch:{},mutations:void 0});
