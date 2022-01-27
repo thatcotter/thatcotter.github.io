@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/talk-to-light", {data:[{}],fetch:{},mutations:void 0});

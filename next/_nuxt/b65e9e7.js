@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[21],{381:function(n,t,e){"use strict";e.r(t);var l={},c=e(26),component=Object(c.a)(l,(function(){var n=this,t=n.$createElement;return(n._self._c||t)("div",[n._v("\n    talk to light\n")])}),[],!1,null,null,null);t.default=component.exports}}]);
