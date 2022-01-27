@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: 'creative technology portfolio' },
       {
         hid: 'og-image', property: 'og:image',
-        content: 'https://domain.com/website-preview.png'
+        content: 'https://thatcotter.github.io/website-preview.png'
       },
       { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
     ],
