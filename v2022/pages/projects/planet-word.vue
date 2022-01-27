@@ -16,8 +16,7 @@
         target="_blank"
         href="https://localprojects.com/work/corporate-experience/abb/"
         >Local Projects</a
-      >
-      Local Projects, the team worked with philanthropist Ann Friedman and her
+      >, the team worked with philanthropist Ann Friedman and her
       team to transform the Franklin School, a National Historical Landmark,
       located six blocks from the White House into Planet Word, the world's
       first voice-activated museum of language. Through ten immersive learning
