@@ -21,6 +21,9 @@ export default {
       },
       { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
     ],
+    script: [
+      {src: "https://kit.fontawesome.com/3803053b89.js"}
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
