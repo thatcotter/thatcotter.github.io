@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/planet-word", {data:[{}],fetch:{},mutations:void 0});
