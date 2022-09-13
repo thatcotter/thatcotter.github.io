@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/projects/oystervr", {data:[{}],fetch:{},mutations:void 0});
