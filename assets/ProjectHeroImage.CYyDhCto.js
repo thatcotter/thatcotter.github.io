@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime.D_zvdyIk.js";import"./index.BgwVLlj0.js";const o=({image:a,url:r})=>{const s=e.jsx("img",{className:"w-full h-auto",src:`/img/${a}`,alt:""});return r?e.jsx("div",{className:"",children:e.jsx("a",{href:r,target:"_blank",rel:"noopener noreferrer",children:s})}):e.jsx("div",{className:"",children:s})};export{o as default};

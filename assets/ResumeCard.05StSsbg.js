@@ -1,0 +1,2 @@
+import{j as s}from"./jsx-runtime.D_zvdyIk.js";import"./index.BgwVLlj0.js";const c=({title:p,qualifier:r,description:e,list:m})=>s.jsxs("div",{className:"p-2 m-4 bg-gray-20 row-span-auto rounded-lg shadow-md",children:[s.jsx("p",{className:"text-lg font-semibold pt-2 pl-2",children:p}),s.jsx("p",{className:"text-lg font-light pl-2",children:r}),e&&s.jsx("div",{className:"p-2",children:e.split(`
+`).map((a,l)=>s.jsx("p",{className:l>0?"mt-1":"",children:a},l))}),m&&s.jsx("ul",{className:"pb-1 pl-2",children:m.map((a,l)=>s.jsx("li",{children:a},l))})]});export{c as default};

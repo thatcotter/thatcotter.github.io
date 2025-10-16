@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime.D_zvdyIk.js";import"./index.BgwVLlj0.js";const t=({src:o})=>e.jsx("div",{className:"aspect-video sm:m-2 md:m-4 lg:m-6 xl:m-8",children:e.jsxs("video",{className:"w-full h-full",controls:!0,muted:!0,children:[e.jsx("source",{src:`/img/${o}`,type:"video/mp4"}),"Your browser does not support the video tag."]})});export{t as default};

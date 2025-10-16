@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime.D_zvdyIk.js";import"./index.BgwVLlj0.js";const s=({url:l})=>e.jsx("div",{className:"aspect-video sm:m-2 md:m-4 lg:m-6 xl:m-8",children:e.jsx("iframe",{title:"vimeo-player",src:l,allowFullScreen:!0,className:"w-full h-full"})});export{s as default};
