@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime.TBa3i5EZ.js";import"./index.CVf8TyFT.js";const a=({title:e,subtitle:s})=>t.jsxs("div",{className:"",children:[t.jsx("p",{className:"text-3xl font-bold",children:e}),t.jsx("p",{className:"text-2xl font-light",children:s})]});export{a as default};
