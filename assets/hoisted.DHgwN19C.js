@@ -1,0 +1,1 @@
+import"./hoisted.BScVxmeO.js";function r(){const t=document.querySelectorAll(".stagger-in");if(t.length){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){t.forEach(e=>e.classList.add("revealed"));return}t.forEach((e,a)=>{e.classList.remove("revealed"),setTimeout(()=>{e.classList.add("revealed")},a*80)})}}r();document.addEventListener("astro:page-load",r);
