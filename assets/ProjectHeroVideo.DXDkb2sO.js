@@ -1,0 +1,1 @@
+import{t as e}from"./react.BRNZa73l.js";import{t}from"./jsx-runtime.C8BoMr6r.js";e();var n=t(),r=({url:e})=>(0,n.jsx)(`div`,{className:`aspect-video sm:m-2 md:m-4 lg:m-6 xl:m-8`,children:(0,n.jsx)(`iframe`,{title:`vimeo-player`,src:e,allowFullScreen:!0,className:`w-full h-full`})});export{r as default};

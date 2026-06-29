@@ -1,0 +1,1 @@
+import{t as e}from"./react.BRNZa73l.js";import{t}from"./jsx-runtime.C8BoMr6r.js";e();var n=t(),r=({title:e,subtitle:t})=>(0,n.jsxs)(`div`,{className:``,children:[(0,n.jsx)(`p`,{className:`text-3xl font-bold`,children:e}),(0,n.jsx)(`p`,{className:`text-2xl font-light`,children:t})]});export{r as default};
